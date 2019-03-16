@@ -1,5 +1,9 @@
-﻿
 \Windows\System32\wbem
+
+Activate Windows
+  http://www.apeswithcomputers.com/article/use-slmgr-to-activate-windows
+  https://techjourney.net/slmgr-commands-and-options-for-windows-product-key-kms-token-ad-activation/
+  https://www.quora.com/How-can-I-activate-Windows-10-with-CMD
 
 
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
@@ -340,3 +344,5 @@ Windows File Protection
   C:\Windows\System32\catroot
     {127D0A1D-4EF2-11D1-8608-00C04FC295EE}
     {F750E6C3-38EE-11D1-85E5-00C04FC295EE}
+
+driverquery.exe
