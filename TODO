@@ -1,4 +1,5 @@
 ﻿
+\Windows\System32\wbem
 
 
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
@@ -81,7 +82,7 @@ x_dialupass2.cpp
 HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa
 
 
-COM: shell.applicatino
+COM: shell.application
      $shell =  new-object -comObject shell.application
      $shell.open(…) etc
 
