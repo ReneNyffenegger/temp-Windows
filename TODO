@@ -1,0 +1,343 @@
+
+Optional features
+  https://www.howtogeek.com/250228/what-windows-10s-optional-features-do-and-how-to-turn-them-on-or-off/
+
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
+  DefaultUserName
+  DefaultPassword
+
+   at.exe
+       http://ins3cure.blogspot.com/2012/04/lsa-secrets.html
+         A new task can be scheduled with the command:
+           at 09:45 /INTERACTIVE cmd.exe
+         and will appear in c:\WINDOWS\Tasks folder. 
+     
+         tasklist /FI "USERNAME eq NT AUTHORITY\SYSTEM"(
+
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree
+
+L$RTMTIMEBOMB_[...]: FILETIME giving the date when an unactivated copy of Windows will stop working
+  http://moyix.blogspot.com/2008/02/decrypting-lsa-secrets.html
+
+
+http://www-pc.uni-regensburg.de/systemsw/win10/settings.htm
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AllowedEnumeration
+HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\AllowedEnumeration
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{GUID}
+   https://www.winhelponline.com/blog/show-hide-shell-folder-namespace-windows-10/
+
+
+HLM\SYSTEM\CurrentControlSet\Services\NetLogon\Parameters
+  https://support.microsoft.com/en-us/help/175468/effects-of-machine-account-replication-on-a-domain(
+
+lsasrv.dll
+  exports LsarQuerySecret 
+
+HKEY_LOCAL_MACHINE\Security
+    http://ins3cure.blogspot.com/2012/04/lsa-secrets.html
+  Each secret (key) in HKLM\SECURITY\Policy\Secrets contains the data in
+  CurrVal sub-key. For example on systems with auto logon enabled, there is a
+  key DefaultPassword that contains the password cached. For some reasons this
+  key already exists (with the password also) even on some systems without auto
+  logon (I had that key on a Windows XP SP3, and I have never had auto login,
+  so I couldn't find out why and when this key is created). 
+
+  A method to (try  to) get the logon password (used by lots of tools also) is to query the value from DefaultPassword key.
+
+
+
+
+HKEY_LOCAL_MACHINE\Security\Policy\Secrets
+  There are lot of other Lsa secret strings which are present at below registry location
+    https://securityxploded.com/defaultpassword.php
+
+  LSA secrets are stored in the SECURITY hive of the registry, in the key SECURITY\Policy\Secrets.
+  Under that key, each secret has its own key, so NL$KM can be found at SECURITY\Policy\Secrets\NL$KM. 
+     http://moyix.blogspot.com/2008/02/decrypting-lsa-secrets.html
+     -
+     Each secret key then has several subkeys associated with it: CurrVal,
+     CupdTime, OldVal, OupdTime, and SecDesc. CurrVal and Oldval are the
+     current and previous values of the secret, and CupdTime and OupdTime are
+     the respective timestamps when the values were updated, as 64-bit
+     FILETIMEs. SecDesc is assumed to be a security descriptor for the secret,
+     but I have not verified this empirically.
+
+
+  Values
+   NL$xx           -> Only NT 4 and earlier: cached logon credentials
+   NL$KM           -> Key material to generate an encryption key / random string for each computer
+   DPAPI_SYSTEM
+   _SC_SerivceName -> Password for specific service.
+                      Username is stored under HKLM\system\CurrentControlSet\Services\_ServiceName_\Security 
+   $MACHINE.ACC    -> Only for computers that are domain members: the computer's password in the domain
+   G$$DomainName   -> 
+
+
+
+x_dialupass2.cpp 
+  http://moyix.blogspot.com/2008/02/decrypting-lsa-secrets.html
+
+HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa
+
+
+COM: shell.applicatino
+     $shell =  new-object -comObject shell.application
+     $shell.open(…) etc
+
+
+lsass.exe
+   http://moyix.blogspot.com/2008/02/decrypting-lsa-secrets.html
+     Perusing this code shows that the author obtained the secret decryption key
+     by searching the memory space of lsass.exe for the string
+     "\x10\x00\x00\x00\x10\x00\x00\x00"; this is because the key was known to be
+     16 bytes, and it is contained in a data structure whose first two fields are
+     little-endian integers giving the current and maximum size of the contained
+     data. Crude as this method is, it has worked in every case I have tried it,
+     and it works well enough that the author of CacheDump uses it in his utility
+     to decrypt the value of NL$KM.
+   
+
+advapi32
+  http://moyix.blogspot.com/2008/02/decrypting-lsa-secrets.html
+    SystemFunction005
+      Some Googling and poking through the Wine source code gives us some initial
+      information: SystemFucntion005 apparently decrypts a variable-length block
+      of data using DES in ECB mode (the relevant code can be found in
+      dlls/advapi32/crypt_lmhash.c.
+
+  https://www.pinvoke.net/default.aspx/advapi32/DefaultPassword.html?diff=y
+     DefaultPassword 
+
+HKEY_LOCAL_MACHINE\SECUIRITY\Policy\Secrets\DefaultPassword
+  https://www.remkoweijnen.nl/blog/2012/05/21/defaultpassword-dumper/
+
+    the DefaultPassword key is of course the encrypted version of the Autologon password as set by for example the SysInternals Autologon tool. I really should have known that…
+
+    the key you describe here is used by autologon (from sys internals) when you configure an autologon account. This must correspond with the autologon options in HKLM\software\Microsoft\WindowsNT\currentversion\WinLogon
+
+strings shell32.dll |egrep '^CLSID_'
+   https://shintakezou.blogspot.com/2015/10/microsoft-windows-clsid-from-shell32dll.html
+
+CLSID
+   https://www.tenforums.com/tutorials/3123-clsid-key-guid-shortcuts-list-windows-10-a.html
+   https://www.sevenforums.com/tutorials/110919-clsid-key-list-windows-7-a.html
+   http://www.klapac.funsite.cz/mediawiki/index.php?title=List_of_Windows_10_CLSID_Key_(GUID)_Shortcuts
+   https://gist.github.com/danzek/abdde5996d2b40959eb7bc1e5e2f4630
+
+   https://winaero.com/blog/clsid-guid-shell-list-windows-10/
+
+
+   shell:::{BB64F8A7-BEE7-4E1A-AB8D-7D8273F7FDB6}
+
+   // Network connection folder
+   shell:::{7007ACC7-3202-11D1-AAD2-00805FC1270E}
+
+   system steuerung 
+   explorer shell:::{26EE0668-A00A-44D7-9371-BEB064C98683}
+
+CLSID shell:::
+
+   https://www.sysmiks.com/class-id-clsid-guid/
+   https://docs.rainmeter.net/tips/launching-windows-special-folders/
+   https://www.geoffchappell.com/studies/windows/shell/explorer/cmdline.htm
+
+
+   ----
+     $Shell = New-Object -ComObject Shell.Application
+     $RecBin = $Shell.Namespace(0xA)
+     $RecBin.self
+     
+        ::{645FF040-5081-101B-9F08-00AA002F954E}
+   ----
+
+  
+
+   https://stackoverflow.com/a/24274223
+
+     ::{26EE0668-A00A-44D7-9371-BEB064C98683}\1\Fonts\::{93412589-74D4-4E4E-AD0E-E0CB621440FD}
+
+
+
+     shell:::{93412589-74D4-4E4E-AD0E-E0CB621440FD}
+     programs and features
+        shell:::{26EE0668-A00A-44D7-9371-BEB064C98683}\8\::{7B81BE6A-CE2B-4676-A29E-EB907A5126C5}
+
+
+ADO with PowerShell
+   https://gist.github.com/danzek/dd6ca72ee78954ffe9ec8868357c48e7
+
+
+What does that do?
+   https://gist.github.com/danzek/c553145a814d09b18f54911d8b8fbd2f
+
+Authentication
+  https://docs.microsoft.com/en-us/windows/desktop/secauthn/authentication-portal
+  https://docs.microsoft.com/en-us/windows/desktop/secauthn/protecting-the-automatic-logon-password
+
+ Where and how is the password stored for the account associated with a Windows service?
+     HKLM\SYSTEM\CurrentControlSet\Services\MY-SERVICE-NAME 
+      https://serverfault.com/questions/777233/where-and-how-is-the-password-stored-for-the-account-associated-with-a-windows-s/777658
+      
+   Passwords for Windows services are stored in the registry under:
+      HKEY_LOCAL_MACHINE\SECURITY\Policy\Secrets\_SC_<ServiceName>
+
+
+
+
+Group Policy
+
+  Group Policy, a Windows 2000 administrative tool, determines how programs,
+  network resources, and the operating system behave for users and computers in
+  an organization. Group Policy uses Group Policy Objects in Active Directory,
+  and affects computers and users by adding, deleting, and changing the values
+  of entries in the Windows 2000 registry.
+
+  https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc957840(v=technet.10)
+
+What about »mmc«
+
+Elastic Search
+   https://gist.github.com/danzek/e3c32db09f3f07fba14163e75b812ecb
+
+Sessions:
+  tasklist shows session number (siztungs nummer)
+
+https://docs.microsoft.com/de-de/windows-hardware/drivers/devtest/devcon
+  https://superuser.com/a/486647
+
+
+Eject hard drive
+
+   https://renenyffenegger.ch/notes/development/tools/scripts/personal/ejusb_bat
+
+   Devices with write-cache enabled are not quick-removable
+
+   RunDll32.exe shell32.dll,Control_RunDLL hotplug.dll
+      to bring up the Safely Remove Hardware dialog box:
+
+
+   $vol = get-wmiobject -Class Win32_Volume | where{$_.Name -eq 'F:\'}
+   write-host $vol.capacity $vol.freeSpace
+   $vol.deviceID
+   $vol.blockSize
+   $vol.fileSystem
+   $vol.driveLetter = $null 
+   $vol.put()
+   $vol.dismount($false, $false)
+      https://serverfault.com/questions/130887/dismount-usb-external-drive-using-powershell
+
+
+LSA Local Security Authority
+
+   https://devblogs.microsoft.com/scripting/use-powershell-to-decrypt-lsa-secrets-from-the-registry/
+
+     The Local Security Authority (LSA) in Windows is designed to manage a systems security policy, auditing, logging users on to the system, and storing private data such as service account passwords.
+
+     PowerShell: Enable-TSDuplicateToken
+        to gain access to HKLM:\SECURITY.
+      dir HKLM:\SECURITY\Policy\Secrets
+
+   https://www.passcape.com/index.php?section=docsys&cmd=details&id=23
+
+   https://www.nirsoft.net/utils/lsa_secrets_view.html
+
+Remove size of WinSxS folder by removing Windows features
+  DISM.exe /Online /Disable-Feature /Featurename:<name> /Remove
+    https://superuser.com/a/594216
+
+HKLM\SECURITY\Policy\Secrets
+  Normally these registry keys are not visible even if you run regedit as administrator.
+  The permissions for this key show that only the SYSTEM account has access to this key. 
+    http://ins3cure.blogspot.com/2012/04/lsa-secrets.html
+
+   at.exe
+       http://ins3cure.blogspot.com/2012/04/lsa-secrets.html
+         A new task can be scheduled with the command:
+           at 09:45 /INTERACTIVE cmd.exe
+         and will appear in c:\WINDOWS\Tasks folder. 
+     
+         tasklist /FI "USERNAME eq NT AUTHORITY\SYSTEM"(
+
+ps -s
+
+cleanmgr
+  https://support.microsoft.com/en-us/help/315246/how-to-automate-the-disk-cleanup-tool-in-windows-xp-and-windows-7
+    This article describes how use command-line options to configure the Disk Cleanup tool (Cleanmgr.exe) to automatically clean up certain files. 
+  
+    Registry settings for CLEANMGR are held in:
+    [HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches]
+
+    Log files for CLEANMGR are stored in:
+      C:\Windows\System32\LogFiles\setupcln\
+
+
+
+Windows Service Pack installation using
+   Update.exe
+Hotfixes installed using
+   Hotfix.exe
+Operating system upgrades using
+   Winnt32.exe
+Windows Update
+
+
+https://support.microsoft.com/en-ca/help/222193/description-of-the-windows-file-protection-feature
+
+
+https://insecure.org/sploits/NT.LSA.secrets.html
+
+Domains
+  https://support.microsoft.com/en-us/help/175468/effects-of-machine-account-replication-on-a-domain
+     For each Windows computer that is a member of a domain, there is a discrete communication channel with a domain controller.
+
+     An example of a discrete communication channel is the security channel.
+
+     The security channel's password is stored together with the computer account
+     on the primary domain controller (PDC), and is replicated to all backup
+     domain controllers (BDCs). The password is also in LSA secret $MACHINE.ACC of
+     the workstation. Each workstation owns such secret data.
+
+http://www.oxid.it/cain.html
+  Cain & Abel is a password recovery tool for Microsoft Operating Systems
+
+https://github.com/moyix/creddump
+  creddump is a python tool to extract various credentials and secrets from
+     Windows registry hives. It currently extracts:
+     * LM and NT hashes (SYSKEY protected)
+     * Cached domain passwords
+     * LSA secrets
+
+
+Passwords in Windows
+  https://de.slideshare.net/nullbind/secure360-extracting-password-from-windows
+     /Windows/Panther
+     HKLM\System\Setup!UnattendFile
+
+
+Privileges
+  seDebugPrivilege
+
+KGS!@#$%
+
+HKEY_LOCAL_MACHINE\SAM\SAM\Domains\Account
+
+HKEY_CURRENT_USER\Software\Microsoft\Internet Explorer\LowRegistry\IEShims\NormalizedPaths
+
+
+
+Windows File Protection 
+
+  Windows Vista and later Windows systems do not include Windows File
+  Protection, but they include Windows Resource Protection which protects files
+  using ACLs. Windows Resource Protection aims to protect core registry keys
+  and values and prevent potentially damaging system configuration changes,
+  besides operating system files. 
+ 
+  https://support.microsoft.com/en-us/help/222193/description-of-the-windows-file-protection-feature
+
+  C:\Windows\System32\catroot
+    {127D0A1D-4EF2-11D1-8608-00C04FC295EE}
+    {F750E6C3-38EE-11D1-85E5-00C04FC295EE}
