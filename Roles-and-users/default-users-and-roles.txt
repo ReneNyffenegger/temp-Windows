@@ -1,0 +1,2 @@
+NT AUTHORITY\SYSTEM
+BUILTIN\Administrators
