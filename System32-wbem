@@ -109,7 +109,6 @@ mispace.mof
 mispace_uninstall.mof     
 mmc.mof     
 MMFUtil.dll     WMI Snapin Helpers
-mofcomp.exe     The Managed Object Format (MOF) Compiler 
 mofd.dll     WMI
 mofinstall.dll     Installers for for MOF files
 mountmgr.mof     
@@ -227,7 +226,6 @@ schannel.mof
 schedprov.dll     Task Scheduler WMIv2 Provider
 SchedProv.mof     
 scm.mof     
-scrcons.exe     WMI Standard Event Consumer - scripting
 scrcons.mof     
 sdbus.mof     
 secrcw32.mof     
@@ -265,7 +263,6 @@ umb.mof
 umbus.mof     
 umpass.mof     
 umpnpmgr.mof     
-unsecapp.exe     Sink to receive asynchronous callbacks for WMI client application
 UserProfileConfigurationWmiProvider.mof     
 UserProfileWmiProvider.mof     
 UserStateWMIProvider.mof     
@@ -286,7 +283,6 @@ wbemdisp.tlb     Typelib for WMI Scripting Interface
 wbemess.dll     WMI
 wbemprox.dll     WMI
 wbemsvc.dll     WMI
-wbemtest.exe     WMI Test Tool
 wcncsvc.mof     
 WdacEtwProv.mof     
 WdacWmiProv.dll     WDAC WMI Providers
@@ -312,18 +308,14 @@ Win32_Tpm.mof
 wininit.mof     
 winipsec.mof     
 winlogon.mof     
-WinMgmt.exe     WMI Service Control Utility
 WinMgmtR.dll     WMI
 Winsat.mof     
 WinsatUninstall.mof     
 wlan.mof     
 WLanHC.mof     
 wmi.mof     
-WMIADAP.exe     WMI Reverse Performance Adapter Maintenance Utility
 WmiApRes.dll     WMI Performance Reverse Adapter Resources
 WmiApRpl.dll     WMI Performance Reverse Adapter
-WmiApSrv.exe     WMI Performance Reverse Adapter
-WMIC.exe     WMI Commandline Utility
 WMICOOKR.dll     WMI
 WmiDcPrv.dll     WMI
 wmipcima.dll     WMI Win32Ex Provider
@@ -344,7 +336,6 @@ WMIPJOBJ.dll     WMI Windows Job Object Provider
 wmipjobj.mof     
 wmiprov.dll     WMI
 WmiPrvSD.dll     WMI
-WmiPrvSE.exe     WMI Provider Host
 WMIPSESS.dll     WMI Provider for Sessions and Connections
 wmipsess.mof     
 WMIsvc.dll     WMI
