@@ -1,5 +1,7 @@
 .\envVariables
 
+notes: move cmd.exe to below system32.
+
 HKEY_CURRENT_USER\Volatile Environment
   1 with the two values
       CLIENTNAME
