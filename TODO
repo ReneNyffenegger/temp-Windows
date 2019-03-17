@@ -2,6 +2,8 @@
 
 notes: move cmd.exe to below system32.
 
+notes: move development/misc/WMI to Windows/Management-Instrumentation/index
+
 HKEY_CURRENT_USER\Volatile Environment
   1 with the two values
       CLIENTNAME
@@ -238,7 +240,7 @@ Eject hard drive
       to bring up the Safely Remove Hardware dialog box:
 
 
-   $vol = get-wmiobject -Class Win32_Volume | where{$_.Name -eq 'F:\'}
+   $vol = get-wmiobject -class Win32_Volume | where{$_.Name -eq 'F:\'}
    write-host $vol.capacity $vol.freeSpace
    $vol.deviceID
    $vol.blockSize
@@ -371,3 +373,31 @@ Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\F
 
 Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList
    --> Also has a programdata entry
+
+WMI clients:
+  winrs
+  winrm
+
+Which keys are below
+  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WBEM
+
+Registry
+  search for "//./" etc (such as "//./root/CIMV2")
+
+
+  ----------------- Script to get hierarchical namespaces
+
+     function Get-WmiNamespace {
+        Param($Namespace='ROOT')
+        Get-WmiObject -Namespace $Namespace -Class __NAMESPACE | ForEach-Object { (
+          $ns='{0}\{1}' -f $_.__NAMESPACE, $_.Name)
+          Get-WmiNamespace -Namespace $ns
+        }
+     }
+     
+     $WmiClasses=Get-WmiNamespace | ForEach-Object {
+       $Namespace=$_
+       Get-WmiObject -Namespace $Namespace -List | ForEach-Object {
+          $_.Path.Path
+       }
+     } | Sort-Object -Unique
