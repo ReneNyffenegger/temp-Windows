@@ -387,6 +387,8 @@ Registry
 
   ----------------- Script to get hierarchical namespaces
 
+     Bereits auf website abgelegt unter → notes: Windows/Management-Instrumentation/index
+
      function Get-WmiNamespace {
         Param($Namespace='ROOT')
         Get-WmiObject -Namespace $Namespace -Class __NAMESPACE | ForEach-Object { (
@@ -401,3 +403,11 @@ Registry
           $_.Path.Path
        }
      } | Sort-Object -Unique
+
+
+----------------------------------
+
+dcomcnfg.exe
+
+in Powershell
+  ls wsman:\localhost
