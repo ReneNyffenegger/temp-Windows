@@ -1,3 +1,16 @@
+.\envVariables
+
+HKEY_CURRENT_USER\Volatile Environment
+  1 with the two values
+      CLIENTNAME
+      SESSIONNAME
+
+homepath also identified by
+  HOMEDRIVE + HOMEPATH
+
+Where in the registry is USERPROFILE set?
+
+
 \Windows\System32\wbem
 
 Activate Windows
@@ -5,6 +18,7 @@ Activate Windows
   https://techjourney.net/slmgr-commands-and-options-for-windows-product-key-kms-token-ad-activation/
   https://www.quora.com/How-can-I-activate-Windows-10-with-CMD
 
+Is there a possibility to open powershell with a shortcut.
 
 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon
   DefaultUserName
