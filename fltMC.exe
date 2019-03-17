@@ -1,0 +1,32 @@
+PS C:\Windows\system32> .\fltMC.exe
+
+Filter Name                     Num Instances    Altitude    Frame
+------------------------------  -------------  ------------  -----
+WdFilter                                8       328010         0
+storqosflt                              0       244000         0
+wcifs                                   1       189900         0
+CldFlt                                  0       180451         0
+FileCrypt                               0       141100         0
+luafv                                   1       135000         0
+npsvctrig                               1        46000         0
+Wof                                     5        40700         0
+FileInfo                                8        40500         0
+
+
+
+*******************************************************************************************
+
+
+PS C:\Windows\system32> fltmc volumes
+Dos Name                        Volume Name                              FileSystem   Status
+------------------------------  ---------------------------------------  ----------  --------
+                                \Device\Mup                              Remote
+C:                              \Device\HarddiskVolume2                  NTFS
+                                \Device\HarddiskVolume1                  NTFS
+                                \Device\HarddiskVolume3                  NTFS
+                                \Device\NamedPipe                        NamedPipe
+                                \Device\Mailslot                         Mailslot
+D:                              \Device\CdRom0                           UDFS        Detached
+E:                              \Device\HarddiskVolume4                  NTFS
+                                \Device\HarddiskVolumeShadowCopy3        NTFS
+D:                              \Device\CdRom0                           UDFS

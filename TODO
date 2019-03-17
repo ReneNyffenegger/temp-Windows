@@ -364,3 +364,10 @@ Windows File Protection
 driverquery.exe
 
 Where is in the registry is github hidden.
+
+Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FolderDescriptions\{559D40A3-A036-40FA-AF61-84CB430A4D34}
+  --> because it references "ProgramData"
+  --> It has "Paremnt Folder"
+
+Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList
+   --> Also has a programdata entry
