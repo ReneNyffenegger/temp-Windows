@@ -15,3 +15,15 @@ $T   Current time
 $V   Windows version number
 $_   Carriage return and linefeed
 $$   $ (dollar sign)
+
+
+If Command Extensions are enabled the PROMPT command supports
+the following additional formatting characters:
+
+  $+   zero or more plus sign (+) characters depending upon the
+       depth of the PUSHD directory stack, one character for each
+       level pushed.
+
+  $M   Displays the remote name associated with the current drive
+       letter or the empty string if current drive is not a network
+       drive.
