@@ -1,0 +1,1 @@
+wmic desktopmonitor get displayType,monitorManufacturer,monitorType,name,pixelsPerXLogicalInch,pixelsPerYLogicalInch,screenHeight,screenWidth,deviceID
