@@ -11,6 +11,12 @@ HKEY_CURRENT_USER\Volatile Environment
   1 with the two values
       CLIENTNAME
       SESSIONNAME
+      
+      
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system
+  VerboseStatus
+    To see exactly what is running (or running slowly) at windows startup/login, set the following registry key:
+   (Compare with autorun)
 
 Internal 7, p80
   To enable per-user quotas, you can create subkeys under the
