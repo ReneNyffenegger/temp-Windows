@@ -1,0 +1,3 @@
+wmic process where "name='cmd.exe'" get parentProcessId,ProcessId
+
+wmic process get processId,name
