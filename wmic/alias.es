@@ -78,4 +78,4 @@ VOLTAGE                  - Voltage sensor (electronic voltmeter) data management
 VOLUME                   - Local storage volume management.
 VOLUMEQUOTASETTING       - Associates the disk quota setting with a specific disk volume.
 VOLUMEUSERQUOTA          - Per user storage volume quota management.
-WMISET                   - WMI service operational parameters management.
+
