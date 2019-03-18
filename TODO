@@ -426,3 +426,6 @@ dcomcnfg.exe
 
 in Powershell
   ls wsman:\localhost
+
+Alternative methods of becoming SYSTEM
+  https://blog.xpnsec.com/becoming-system/
