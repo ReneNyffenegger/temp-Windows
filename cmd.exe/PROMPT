@@ -1,0 +1,17 @@
+$A   & (Ampersand)
+$B   | (pipe)
+$C   ( (Left parenthesis)
+$D   Current date
+$E   Escape code (ASCII code 27)
+$F   ) (Right parenthesis)
+$G   > (greater-than sign)
+$H   Backspace (erases previous character)
+$L   < (less-than sign)
+$N   Current drive
+$P   Current drive and path
+$Q   = (equal sign)
+$S     (space)
+$T   Current time
+$V   Windows version number
+$_   Carriage return and linefeed
+$$   $ (dollar sign)
