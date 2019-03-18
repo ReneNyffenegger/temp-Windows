@@ -12,6 +12,18 @@ HKEY_CURRENT_USER\Volatile Environment
       CLIENTNAME
       SESSIONNAME
 
+Internal 7, p80
+  To enable per-user quotas, you can create subkeys under the
+  HKLM\SYSTEM\CurrentControlSet\Session Manager\Quota System registry key, each one representing a
+  given user SID. The values mentioned previously can then be created under this specific SID subkey,
+  enforcing the limits only for the processes created by that user. Table 5-9 shows how to configure these
+  values (which can be done at run time or not) and which privileges are required.
+
+When the system boots, the Session Manager process (Smss.exe) reads the list of page files to open by
+examining the HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory
+Management\PagingFiles registry value.
+
+
 homepath also identified by
   HOMEDRIVE + HOMEPATH
 
