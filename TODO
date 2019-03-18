@@ -2,6 +2,9 @@
 
 notes: move cmd.exe to below system32.
 
+Theres a link to registry »Registered Applications«
+   Compare the values under that key with »App Paths«
+
 HKEY_CURRENT_USER\Volatile Environment
   1 with the two values
       CLIENTNAME
