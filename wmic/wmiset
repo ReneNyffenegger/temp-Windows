@@ -1,1 +1,4 @@
 wmic wmiset get DatabaseDirectory,EnableEvents,InstallationDirectory,LoggingDirectory,LoggingLevel,MaxLogFileSize
+
+DatabaseDirectory                    EnableEvents  InstallationDirectory     LoggingDirectory                LoggingLevel  MaxLogFileSize
+C:\windows\system32\wbem\repository  TRUE          C:\windows\system32\wbem  C:\windows\system32\wbem\Logs\  0             65536
