@@ -1,0 +1,11 @@
+vs=IF NOT DEFINED DevEnvDir ("%ProgramFiles%\Microsoft Visual Studio 10.0\VC\vcvarsall.bat" %PROCESSOR_ARCHITECTURE%)
+control="%SystemRoot%\system32\control.exe" /Name "Microsoft.$1"
+localdb="%PROGRAMFILES%\Microsoft SQL Server\110\Tools\Binn\sqllocaldb.exe" start v11.0&&"%PROGRAMFILES%\Microsoft
+
+cat=type $*
+clear=cls $*
+cp=copy $*
+h=doskey /history
+ls=dir $*
+mv=move $*
+rm=del $*
