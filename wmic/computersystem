@@ -1,0 +1,1 @@
+wmic computersystem get thermalState,SystemType,wakeUpType,totalPhysicalMemory,resetLimit
