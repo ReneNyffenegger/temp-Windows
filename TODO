@@ -440,3 +440,7 @@ Alternative methods of becoming SYSTEM
 
 HKEY_CURRENT_USER\Software\Classes\Local Settings\MuiCache
   Because it seems to extract text from -1 names
+
+
+
+wmic startup get name,command,user
