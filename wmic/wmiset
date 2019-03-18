@@ -1,0 +1,1 @@
+wmic wmiset get DatabaseDirectory,EnableEvents,InstallationDirectory,LoggingDirectory,LoggingLevel,MaxLogFileSize
