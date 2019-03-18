@@ -1,1 +1,3 @@
-wmic product get packageName,name,description,installLocation,installSource,installState,productId
+wmic product get packageName,name,installLocation,installSource,installState,productId
+
+wmic product where name="Microsoft Visual C++ 2005 Redistributable" call uninstall
