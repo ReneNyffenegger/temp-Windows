@@ -1,0 +1,1 @@
+wmic cpu get addressWidth,architecture,availability,caption,currentClockSpeed,dataWidth,manufacturer,numberOfCores,numberOflogicalProcessors
