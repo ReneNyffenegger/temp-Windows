@@ -1,0 +1,1 @@
+wmic devicememoryaddress get startingAddress,endingAddress,memoryType
