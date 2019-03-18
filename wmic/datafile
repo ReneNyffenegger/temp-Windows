@@ -1,0 +1,3 @@
+-- the %ComSpec:\=\\% construct replaces the \ with \\
+
+wmic datafile where name="%ComSpec:\=\\%" get /format:list
