@@ -429,3 +429,8 @@ in Powershell
 
 Alternative methods of becoming SYSTEM
   https://blog.xpnsec.com/becoming-system/
+
+-------------------------------
+
+HKEY_CURRENT_USER\Software\Classes\Local Settings\MuiCache
+  Because it seems to extract text from -1 names
