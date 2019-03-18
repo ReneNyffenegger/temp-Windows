@@ -1,0 +1,1 @@
+wmic desktop get name,borderWidth,cursorBlinkRate,coolSwitch,wallpaper
