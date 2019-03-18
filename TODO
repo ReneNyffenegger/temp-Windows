@@ -444,3 +444,10 @@ HKEY_CURRENT_USER\Software\Classes\Local Settings\MuiCache
 
 
 wmic startup get name,command,user
+
+------------------------------------------
+
+
+https://www.digitalcitizen.life/six-ways-removeuninstall-windows-programs-and-apps
+
+HKLM\Software\Microsoft\Windows\CurrentVersion\Uninstall

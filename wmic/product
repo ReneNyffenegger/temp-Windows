@@ -1,0 +1,1 @@
+wmic product get packageName,name,description,installLocation,installSource,installState,productId
