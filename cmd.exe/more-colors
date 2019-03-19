@@ -1,1 +1,4 @@
 https://www.robvanderwoude.com/ansi.php
+
+HKEY_CURRENT_USER\Console\VirtualTerminalLevel
+  https://superuser.com/questions/413073/windows-console-with-ansi-colors-handling
