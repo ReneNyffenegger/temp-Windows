@@ -1,3 +1,21 @@
+Making Space
+------------
+   cleanmgr
+     https://support.microsoft.com/en-us/help/315246/how-to-automate-the-disk-cleanup-tool-in-windows-xp-and-windows-7
+       This article describes how use command-line options to configure the Disk Cleanup tool (Cleanmgr.exe) to automatically clean up certain files. 
+     
+       Registry settings for CLEANMGR are held in:
+       [HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches]
+   
+       Log files for CLEANMGR are stored in:
+         C:\Windows\System32\LogFiles\setupcln\
+   
+     notes: Windows/Installer/index
+     HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Installer
+
+     HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
+
+
 .\envVariables
 
 notes: move cmd.exe to below system32.
@@ -17,6 +35,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system
   VerboseStatus
     To see exactly what is running (or running slowly) at windows startup/login, set the following registry key:
    (Compare with autorun)
+
+HKEY_CURRENT_USER\Software\VB and VBA Program Settings
 
 Internal 7, p80
   To enable per-user quotas, you can create subkeys under the
@@ -305,15 +325,7 @@ HKLM\SECURITY\Policy\Secrets
 
 ps -s
 
-cleanmgr
-  https://support.microsoft.com/en-us/help/315246/how-to-automate-the-disk-cleanup-tool-in-windows-xp-and-windows-7
-    This article describes how use command-line options to configure the Disk Cleanup tool (Cleanmgr.exe) to automatically clean up certain files. 
-  
-    Registry settings for CLEANMGR are held in:
-    [HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VolumeCaches]
 
-    Log files for CLEANMGR are stored in:
-      C:\Windows\System32\LogFiles\setupcln\
 
 
 

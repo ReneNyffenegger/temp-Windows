@@ -1,0 +1,1 @@
+wmic memoryChip get dataWidth,interleaveDataDepth,memoryType,name,capacity,positionInRow,speed,totalWidth,typeDetail

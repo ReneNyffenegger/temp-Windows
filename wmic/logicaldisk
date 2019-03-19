@@ -1,0 +1,2 @@
+wmic logicaldisk get caption,driveType,filesystem,freeSpace,mediaType,size 
+

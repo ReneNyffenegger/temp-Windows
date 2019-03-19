@@ -1,3 +1,114 @@
-wmic product get packageName,name,installLocation,installSource,installState,productId
 
-wmic product where name="Microsoft Visual C++ 2005 Redistributable" call uninstall
+---> Why are not all installed packages seen?
+
+
+wmic product get packageName,name,installLocation,installSource,installState,productId
+wmic product get packageName,name,installLocation              ,installState,productId
+wmic product get packageName,name,installLocation              ,installState
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+InstallLocation                                                           InstallState  Name                                                                             PackageName
+                                                                          5             Subversion                                                                       Setup-Subversion-1.7.6.msi
+                                                                          5             Node.js                                                                          node-v0.10.31-x86.msi
+C:\Users\Ren‚\AppData\Local\Microsoft\SkypeForBusinessPlugin\16.2.0.194\  5             Skype Meetings App                                                               SkypeMeetingsApp.msi
+                                                                          5             vbWatchdog ULTIMATE-EDITION TRIAL (v3.8.4.0)                                     vbwatchdog-ultimate-edition trial-x86.msi
+C:\Users\Ren‚\AppData\Local\Microsoft\LWAPlugin\x86\15.8\                 5             Microsoft Lync Web App Plug-in                                                   LWAPlugin32BitInstaller.msi
+                                                                          5             Microsoft Application Error Reporting                                            dw20shared.msi
+C:\Program Files\Microsoft Office\                                        5             Microsoft Office OneNote MUI (English) 2010                                      OneNoteMUI.msi
+C:\Program Files\Microsoft Office\                                        5             Microsoft Office InfoPath MUI (English) 2010                                     InfoPathMUI.msi
+C:\Program Files\Microsoft Office\                                        5             Microsoft Office Access MUI (English) 2010                                       AccessMUI.msi
+C:\Program Files\Microsoft Office\                                        5             Microsoft Office Shared Setup Metadata MUI (English) 2010                        OfficeMUISet.msi
+C:\Program Files\Microsoft Office\                                        5             Microsoft Office Excel MUI (English) 2010                                        ExcelMUI.msi
+C:\Program Files\Microsoft Office\                                        5             Microsoft Office Access Setup Metadata MUI (English) 2010                        AccessMUISet.msi
+C:\Program Files\Microsoft Office\                                        5             Microsoft Office PowerPoint MUI (English) 2010                                   PowerPointMUI.msi
+C:\Program Files\Microsoft Office\                                        5             Microsoft Office Publisher MUI (English) 2010                                    PublisherMUI.msi
+C:\Program Files\Microsoft Office\                                        5             Microsoft Office Outlook MUI (English) 2010                                      OutlookMUI.msi
+C:\Program Files\Microsoft Office\                                        5             Microsoft Office Groove MUI (English) 2010                                       GrooveMUI.msi
+C:\Program Files\Microsoft Office\                                        5             Microsoft Office Word MUI (English) 2010                                         WordMUI.msi
+C:\Program Files\Microsoft Office\                                        5             Microsoft Office Proofing (English) 2010                                         Proofing.msi
+C:\Program Files\Microsoft Office\                                        5             Microsoft Office Shared MUI (English) 2010                                       OfficeMUI.msi
+C:\Program Files\Microsoft Office\                                        5             Microsoft Office Proof (English) 2010                                            Proof.msi
+C:\Program Files\Microsoft Office\                                        5             Microsoft Office Proof (Spanish) 2010                                            Proof.msi
+C:\Program Files\Microsoft Office\                                        5             Microsoft Office Proof (French) 2010                                             Proof.msi
+C:\Program Files\Microsoft Office\                                        5             Microsoft Office Professional Plus 2010                                          ProPlusrWW.msi
+                                                                          5             Microsoft SQL Server System CLR Types                                            sqlsysclrtypes.msi
+                                                                          5             Inkscape 0.91                                                                    inkscape-0.91.msi
+                                                                          5             Microsoft Visual Studio 2010 Tools for Office Runtime (x86) Language Pack - DEU  vstor40_LP_x86_deu.msi
+C:\Users\Ren‚\Documents\AMD APP\                                          5             AMD APP SDK Samples                                                              AMDAPPSDK_Samples.msi
+                                                                          5             Microsoft Windows SDK Net Fx Interop Headers And Libraries (30514)               WinSDKInterop_x86.msi
+                                                                          5             Microsoft SQL Server 2012 Express LocalDB                                        sqllocaldb.msi
+                                                                          5             SQL Server 2012 Common Files                                                     sql_common_core_loc.msi
+                                                                          5             Microsoft Windows SDK for Windows 7 (7.1)                                        WinSDK_x86.msi
+                                                                          5             Microsoft Visual C++ 2010  x86 Redistributable - 10.0.40219                      vc_red.msi
+                                                                          5             Python 2.7.8                                                                     python-2.7.8.msi
+C:\Program Files\LibreOffice 4\                                           5             LibreOffice 4.4.6.3                                                              LibreOffice_4.4.6_Win_x86.msi
+                                                                          5             Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.21005                       vc_runtimeMinimum_x86.msi
+                                                                          5             Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.21005                    vc_runtimeAdditional_x86.msi
+                                                                          5             Google Earth Pro                                                                 GoogleEarth-EC-x86.msi
+                                                                          5             Microsoft Visual C++ 2010  x86 Runtime - 10.0.40219                              vc_runtime_x86.msi
+                                                                          5             EpsonNet Print                                                                   Setupx86.msi
+                                                                          5             hppLaserJetService                                                               hppLaserJetService.msi
+                                                                          5             Microsoft .NET Framework 4.7.2                                                   netfx_Full_x86.msi
+                                                                          5             SQL Server 2012 Common Files                                                     sql_common_core.msi
+                                                                          5             Epson Customer Participation                                                     EpsonCustomerParticipation.msi
+                                                                          5             hpbM401DSService                                                                 hpbM401DSService.msi
+                                                                          5             Microsoft Visual Studio 2010 Tools for Office Runtime (x86)                      vstor40_x86.msi
+                                                                          5             Microsoft System CLR Types for SQL Server 2012                                   sqlsysclrtypes.msi
+                                                                          5             Microsoft SQL Server 2008 Setup Support Files                                    sqlsupport.msi
+                                                                          5             Microsoft .NET Framework 4.7.2 (DEU)                                             netfx_FullLP_x86.msi
+C:\Program Files\AMD APP\                                                 5             AMD APP CPU SDK Runtime                                                          OpenCL-CPU.msi
+                                                                          5             Microsoft SQL Server 2012 Native Client                                          sqlncli.msi
+                                                                          5             GStreamer WinBuilds 0.10.6 (GPL)                                                 GStreamer-WinBuilds-GPL-x86.msi
+                                                                          5             Microsoft Visual Studio 2010 Shell (Isolated) - ENU                              vs_setup.msi
+                                                                          5             GStreamer WinBuilds SDK 0.10.7 (GPL)                                             GStreamer-WinBuilds-SDK-GPL-x86-Beta04-0.10.7.msi
+C:\Program Files\e-Sword\                                                 5             e-Sword                                                                          e-Sword.msi
+                                                                          5             Java 8 Update 40                                                                 jre1.8.0_40full.msi
+C:\Program Files\Java\jdk1.7.0_51\                                        5             Java SE Development Kit 7 Update 51                                              jdk1.7.0_51.msi
+                                                                          5             Microsoft SQL Server 2008 R2 Management Objects                                  sharedmanagementobjects.msi
+C:\Program Files\Foxit Software\                                          5             Foxit PhantomPDF Standard                                                        Setup.msi
+                                                                          5             TortoiseSVN 1.7.10.23359 (32 bit)                                                TortoiseSVN-1.7.10.23359-win32-svn-1.7.7.msi
+                                                                          5             Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.6161                   vc_red.msi
+                                                                          5             VMware Player                                                                    vmwareplayer_x86.msi
+                                                                          5             Microsoft Help Viewer 1.1                                                        help3_vs.msi
+                                                                          5             Microsoft SQL Server 2012 Transact-SQL Compiler Service                          sqlls.msi
+                                                                          5             Microsoft SQL Server 2012 Transact-SQL ScriptDom                                 sqldom.msi
+                                                                          5             PatchCleaner                                                                     PatchCleanerSetup.msi
+                                                                          5             32 Bit HP CIO Components Installer                                               CIOUM32.msi
+                                                                          5             Microsoft .NET Framework 4 Multi-Targeting Pack                                  NetFx_DTP.msi
+                                                                          5             HP Unified IO                                                                    UnifiedIO.msi
+                                                                          5             hppM401LaserJetService                                                           hppM401LaserJetService.msi
+                                                                          5             Google Update Helper                                                             GoogleUpdateHelper.msi
+C:\Strawberry\                                                            5             Strawberry Perl                                                                  strawberry-perl-5.24.0.1-32bit.msi
+                                                                          5             Google Update Helper                                                             GoogleUpdateHelper.msi
+                                                                          5             Epson Event Manager                                                              EEM.msi
+                                                                          5             Software Updater                                                                 Setup.msi
+                                                                          5             Microsoft Windows SDK Intellisense and Reference Assemblies (30514)              WinSDKIntellisenseRefAssys_x86.msi
+                                                                          5             Microsoft Windows SDK for Windows 7 Headers and Libraries (30514)                WinSDKBuild_x86.msi
+                                                                          5             Windows SDK IntellisenseNFX                                                      WinSDKIntellisenseNFX.msi
+                                                                          5             hpbDSService                                                                     hpbDSService.msi
+                                                                          5             Microsoft Windows SDK for Windows 7 Utilities for Win32 Development (30514)      WinSDKWin32Tools_x86.msi
+                                                                          5             Microsoft Visual C++ 2005 Redistributable                                        vcredist.msi
+                                                                          5             Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.4148                   vc_red.msi
+                                                                          5             Microsoft Windows SDK for Windows 7 Common Utilities (30514)                     WinSDKTools_x86.msi
+c:\Program Files\Microsoft Silverlight\                                   5             Microsoft Silverlight                                                            silverlight.msi
+                                                                          5             Microsoft SQL Server 2012 Setup (English)                                        sqlsupport.msi
+                                                                          5             SQL Server 2012 Management Studio                                                sql_ssms.msi
+                                                                          5             Microsoft Report Viewer 2012 Runtime                                             reportviewer.msi
+                                                                          5             Java Auto Updater                                                                au.msi
+                                                                          5             SQL Server 2012 Management Studio                                                sql_ssms_loc.msi
+C:\Program Files\AMD APP\                                                 5             AMD APP SDK Developer                                                            AMDAPPSDK_Dev.msi
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+wmic product where name="Microsoft Visual C++ 2005 Redistributable"                      call uninstall
+wmic product where name="Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.4148" call uninstall
+wmic product where name="Microsoft Visual C++ 2008 Redistributable - x86 9.0.30729.6161" call uninstall
+wmic product where name="Microsoft Visual Studio 2010 Shell (Isolated) - ENU"            call uninstall
+wmic product where name="Microsoft Visual C++ 2013 x86 Minimum Runtime - 12.0.21005"     call uninstall
+wmic product where name="Microsoft Visual C++ 2013 x86 Additional Runtime - 12.0.21005"  call uninstall
+
+wmic product where name="AMD APP SDK Samples"                                            call uninstall
+wmic product where name="AMD APP CPU SDK Runtime"                                        call uninstall
+
+Error message 1603 might mean that elevated privileges are needed.

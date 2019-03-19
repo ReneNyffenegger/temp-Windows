@@ -1,0 +1,5 @@
+wmic logon get authenticationPackage,logonId,logonType,startTime
+
+AuthenticationPackage  LogonId  LogonType  StartTime
+NTLM                   5221703  2          20190318213813.148830+060
+NTLM                   5221670  2          20190318213813.148830+060
