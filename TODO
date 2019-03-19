@@ -38,6 +38,8 @@ HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system
 
 HKEY_CURRENT_USER\Software\VB and VBA Program Settings
 
+Why is it different if I start cmd.exe via start menu rather than via Win+r (settings taken under registry...)
+
 Internal 7, p80
   To enable per-user quotas, you can create subkeys under the
   HKLM\SYSTEM\CurrentControlSet\Session Manager\Quota System registry key, each one representing a
