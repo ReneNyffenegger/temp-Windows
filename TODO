@@ -472,3 +472,12 @@ HKLM\Software\Microsoft\Windows\CurrentVersion\Uninstall
   https://superuser.com/q/1066441/16610 
   https://winaero.com/blog/how-to-prevent-windows-10-from-automatically-rebooting-for-update-installations/
   https://winaero.com/blog/how-to-disable-windows-update-in-windows-10-rtm/  
+
+---------------------------------
+
+
+  C:\Windows\ServiceProfiles\NetworkService\AppData\Roaming\Microsoft\SystemCertificates
+
+--------------------------------
+
+  Windows-key + Pause/break shows »basic information about the computer« (including the shop gmbh).
