@@ -1,1 +1,6 @@
 
+rundll32 shell32,Control_RunDLL input.dll,,{C07337D3-DB2C-4D0B-9A93-B722A6C106E2}
+
+HKEY_CURRENT_USER\Keyboard Layout
+  
+https://winaero.com/blog/change-hotkeys-switch-keyboard-layout-windows-10/
