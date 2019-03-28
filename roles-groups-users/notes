@@ -1,3 +1,9 @@
 https://serverfault.com/questions/168752/windows-localsystem-vs-system
 https://stackoverflow.com/questions/3439760/localsystem-vs-system-vs-local-system-windows-system-accounts
 https://stackoverflow.com/questions/510170/the-difference-between-the-local-system-account-and-the-network-service-acco
+
+LocalSystemAccount:
+  https://docs.microsoft.com/en-us/windows/desktop/Services/localsystem-account
+  
+How to become Local System
+  https://specopssoft.com/blog/how-to-become-the-local-system-account-with-psexec/
