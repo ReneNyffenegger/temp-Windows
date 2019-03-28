@@ -1,4 +1,18 @@
-NT AUTHORITY\SYSTEM
-NT AUTHORITY\LOCAL SERVICE
-NT AUTHORITY\NETWORK SERVICE
-BUILTIN\Administrators
+
+Well known groups
+
+  BUILTIN\Administrators                                        S-1-5-32-544 Mandatory group, Enabled by default, Enabled group, Group owner
+  BUILTIN\Users                                                 S-1-5-32-545 Mandatory group, Enabled by default, Enabled group
+  LOCAL                                                         S-1-2-0      Mandatory group, Enabled by default, Enabled group
+  Everyone                                                      S-1-1-0      Mandatory group, Enabled by default, Enabled group
+  CONSOLE LOGON                                                 S-1-2-1      Mandatory group, Enabled by default, Enabled group
+  NT AUTHORITY\Local account and member of Administrators group S-1-5-114    Mandatory group, Enabled by default, Enabled group
+  NT AUTHORITY\INTERACTIVE                                      S-1-5-4      Mandatory group, Enabled by default, Enabled group
+  NT AUTHORITY\Authenticated Users                              S-1-5-11     Mandatory group, Enabled by default, Enabled group
+  NT AUTHORITY\This Organization                                S-1-5-15     Mandatory group, Enabled by default, Enabled group
+  NT AUTHORITY\Local account                                    S-1-5-113    Mandatory group, Enabled by default, Enabled group
+  NT AUTHORITY\NTLM Authentication                              S-1-5-64-10  Mandatory group, Enabled by default, Enabled group
+
+  NT AUTHORITY\SYSTEM
+  NT AUTHORITY\LOCAL SERVICE
+  NT AUTHORITY\NETWORK SERVICE
