@@ -16,12 +16,6 @@ Making Space
      HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall
 
 
-.\envVariables
-
-notes: move cmd.exe to below system32.
-
-notes: move development/misc/WMI to Windows/Management-Instrumentation/index
-
 Theres a link to registry »Registered Applications«
    Compare the values under that key with »App Paths«
 
