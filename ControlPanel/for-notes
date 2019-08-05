@@ -1,0 +1,671 @@
+
+table { llll
+
+  Canonical name ☰ → development/UUID-GUID{GUID] ☰ Module Name ☰ Pages
+
+Microsoft.ActionCenter ☰ {BB64F8A7-BEE7-4E1A-AB8D-7D8273F7FDB6} ☰ @%SystemRoot%\System32\ActionCenterCPL.dll,-1 ☰
+</li>
+<li><p><strong>Pages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page Name</th>
+<th>Opens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MaintenanceSettings</td>
+<td>Automatic Maintenance</td>
+</tr>
+<tr>
+<td>pageProblems</td>
+<td>Problem Reports</td>
+</tr>
+<tr>
+<td>pageReliabilityView</td>
+<td>Reliability Monitor</td>
+</tr>
+<tr>
+<td>pageResponseArchive</td>
+<td>Archived Messages</td>
+</tr>
+<tr>
+<td>pageSettings</td>
+<td>Problem Reporting Settings</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</li>
+</ul>
+<h3 id="administrative-tools">Administrative Tools</h3>
+Microsoft.AdministrativeTools ☰ {D20EA4E1-3957-11d2-A40B-0C5020524153} ☰ @%SystemRoot%\system32\shell32.dll,-22982 ☰
+</ul>
+<h3 id="autoplay">AutoPlay</h3>
+Microsoft.AutoPlay ☰ {9C60DE1E-E5FC-40f4-A487-460851A8D915} ☰ @%SystemRoot%\System32\autoplay.dll,-1 ☰
+</ul>
+<h3 id="biometric-devices">Biometric Devices</h3>
+Microsoft.BiometricDevices ☰ {0142e4d0-fb7a-11dc-ba4a-000ffe7ab428} ☰ @%SystemRoot%\System32\biocpl.dll,-1 ☰
+</ul>
+<h3 id="bitlocker-drive-encryption">BitLocker Drive Encryption</h3>
+Microsoft.BitLockerDriveEncryption ☰ {D9EF8727-CAC2-4e60-809E-86F80A666C91} ☰ @%SystemRoot%\System32\fvecpl.dll,-1 ☰
+</ul>
+<h3 id="color-management">Color Management</h3>
+Microsoft.ColorManagement ☰ {B2C761C6-29BC-4f19-9251-E6195265BAF1} ☰ @%systemroot%\system32\colorcpl.exe,-6 ☰
+</ul>
+<h3 id="credential-manager">Credential Manager</h3>
+Microsoft.CredentialManager ☰ {1206F5F1-0569-412C-8FEC-3204630DFB70} ☰ @%SystemRoot%\system32\Vault.dll,-1 ☰
+<li><p><strong>Pages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page Name</th>
+<th>Opens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>?SelectedVault=CredmanVault</td>
+<td>Windows Credentials</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</li>
+</ul>
+<h3 id="date-and-time">Date and Time</h3>
+Microsoft.DateAndTime ☰ {E2E7934B-DCE5-43C4-9576-7FE4F75E7480} ☰ @%SystemRoot%\System32\timedate.cpl,-51 ☰
+<li><p><strong>Pages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page Name</th>
+<th>Opens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Additional Clocks</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</li>
+</ul>
+<h3 id="default-programs">Default Programs</h3>
+Microsoft.DefaultPrograms ☰ {17cd9488-1228-4b2f-88ce-4298e93e0966} ☰ @%SystemRoot%\System32\sud.dll,-1 ☰
+<li><p><strong>Pages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page Name</th>
+<th>Opens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pageDefaultProgram</td>
+<td>Set Default Programs</td>
+</tr>
+<tr>
+<td>pageFileAssoc</td>
+<td>Set Associations</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</li>
+</ul>
+<h3 id="device-manager">Device Manager</h3>
+Microsoft.DeviceManager ☰ {74246bfc-4c96-11d0-abef-0020af6b0b7a} ☰ @%SystemRoot%\System32\devmgr.dll,-4 ☰
+</ul>
+<h3 id="devices-and-printers">Devices and Printers</h3>
+Microsoft.DevicesAndPrinters ☰ {A8A91A66-3A7D-4424-8D24-04E180695C7A} ☰ @%systemroot%\system32\DeviceCenter.dll,-1000 ☰
+</ul>
+<h3 id="display">Display</h3>
+Microsoft.Display ☰ {C555438B-3C23-4769-A71F-B6D3D9B6053A} ☰ @%SystemRoot%\System32\Display.dll,-1 ☰
+<li><p><strong>Pages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page Name</th>
+<th>Opens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Settings</td>
+<td>Screen Resolution</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</li>
+</ul>
+<h3 id="ease-of-access-center">Ease of Access Center</h3>
+Microsoft.EaseOfAccessCenter ☰ {D555645E-D4F8-4c29-A827-D93C859C4F2A} ☰ @%SystemRoot%\System32\accessibilitycpl.dll,-10 ☰
+<li><p><strong>Pages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page Name</th>
+<th>Opens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pageEasierToClick</td>
+<td>Make the mouse easier to use</td>
+</tr>
+<tr>
+<td>pageEasierToSee</td>
+<td>Make the computer easier to see</td>
+</tr>
+<tr>
+<td>pageEasierWithSounds</td>
+<td>Use text or visual alternatives for sounds</td>
+</tr>
+<tr>
+<td>pageFilterKeysSettings</td>
+<td>Set up Filter Keys</td>
+</tr>
+<tr>
+<td>pageKeyboardEasierToUse</td>
+<td>Make the keyboard easier to use</td>
+</tr>
+<tr>
+<td>pageNoMouseOrKeyboard</td>
+<td>Use the computer without a mouse or keyboard</td>
+</tr>
+<tr>
+<td>pageNoVisual</td>
+<td>Use the computer without a display</td>
+</tr>
+<tr>
+<td>pageQuestionsCognitive</td>
+<td>Get recommendations to make your computer easier to use (cognitive)</td>
+</tr>
+<tr>
+<td>pageQuestionsEyesight</td>
+<td>Get recommendations to make your computer easier to use (eyesight)</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</li>
+</ul>
+<h3 id="family-safety">Family Safety</h3>
+Microsoft.ParentalControls ☰ {96AE8D84-A250-4520-95A5-A47A7E3C548B} ☰ @%SystemRoot%\System32\wpccpl.dll,-100 ☰
+<li><p><strong>Pages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page Name</th>
+<th>Opens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pageUserHub</td>
+<td>Choose a user and set up Family Safety</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</li>
+</ul>
+<h3 id="file-history">File History</h3>
+Microsoft.FileHistory ☰ {F6B6E965-E9B2-444B-9286-10C9152EDBC5} ☰ @%SystemRoot%\System32\fhcpl.dll,-52 ☰
+<li>File History includes a newer version of the Backup and Restore item, but that older item's canonical name does not remap to File History.</li>
+</ul>
+<h3 id="folder-options">Folder Options</h3>
+Microsoft.FolderOptions ☰ {6DFD7C5C-2451-11d3-A299-00C04F8EF6AF} ☰ @%SystemRoot%\system32\shell32.dll,-22985 ☰
+</ul>
+<h3 id="fonts">Fonts</h3>
+Microsoft.Fonts ☰ {93412589-74D4-4E4E-AD0E-E0CB621440FD} ☰ @%SystemRoot%\System32\FontExt.dll,-8007 ☰
+</ul>
+<h3 id="homegroup">HomeGroup</h3>
+Microsoft.HomeGroup ☰ {67CA7650-96E6-4FDD-BB43-A8E774F73A57} ☰ @%SystemRoot%\System32\hgcpl.dll,-1 ☰
+</ul>
+<h3 id="indexing-options">Indexing Options</h3>
+Microsoft.IndexingOptions ☰ {87D66A43-7B11-4A28-9811-C86EE395ACF7} ☰ @%SystemRoot%\System32\srchadmin.dll,-601 ☰
+</ul>
+<h3 id="infrared">Infrared</h3>
+Microsoft.Infrared ☰ {A0275511-0E86-4ECA-97C2-ECD8F1221D08} ☰ @%SystemRoot%\System32\irprops.cpl,-1 ☰
+</ul>
+<h3 id="internet-options">Internet Options</h3>
+Microsoft.InternetOptions ☰ {A3DD4F92-658A-410F-84FD-6FBBBEF2FFFE} ☰ @C:\\Windows\\System32\\inetcpl.cpl,-4312 ☰
+<li><p><strong>Pages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page Name</th>
+<th>Opens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Security</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Privacy</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Content</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Connections</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Programs</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Advanced</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</li>
+</ul>
+<h3 id="iscsi-initiator">iSCSI Initiator</h3>
+Microsoft.iSCSIInitiator ☰ {A304259D-52B8-4526-8B1A-A1D6CECC8243} ☰ @%SystemRoot%\System32\iscsicpl.dll,-5001 ☰
+</ul>
+<h3 id="isns-server">iSNS Server</h3>
+Microsoft.iSNSServer ☰ {0D2A3442-5181-4E3A-9BD4-83BD10AF3D76} ☰ @%SystemRoot%\System32\isnssrv.dll,-5005 ☰
+<li>This Control Panel item will be seen only in server versions of Windows.</li>
+</ul>
+<h3 id="keyboard">Keyboard</h3>
+Microsoft.Keyboard ☰ {725BE8F7-668E-4C7B-8F90-46BDB0936430} ☰ @%SystemRoot%\System32\main.cpl,-102 ☰
+</ul>
+<h3 id="location-settings">Location Settings</h3>
+Microsoft.LocationSettings ☰ {E9950154-C418-419e-A90A-20C5287AE24B} ☰ @%SystemRoot%\System32\SensorsCpl.dll,-1 ☰
+</ul>
+<h3 id="mouse">Mouse</h3>
+Microsoft.Mouse ☰ {6C8EEC18-8D75-41B2-A177-8831D59D2D50} ☰ @%SystemRoot%\System32\main.cpl,-100 ☰
+<li><p><strong>Pages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page Name</th>
+<th>Opens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Pointers</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Pointer Options</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Wheel</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Hardware</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</li>
+</ul>
+<h3 id="mpioconfiguration">MPIOConfiguration</h3>
+Microsoft.MPIOConfiguration ☰ {AB3BE6AA-7561-4838-AB77-ACF8427DF426} ☰ @%SystemRoot%\System32\mpiocpl.dll,-1000 ☰
+<li>This Control Panel item will be seen only in server versions of Windows.</li>
+</ul>
+<h3 id="network-and-sharing-center">Network and Sharing Center</h3>
+Microsoft.NetworkAndSharingCenter ☰ {8E908FC9-BECC-40f6-915B-F4CA0E70D03D} ☰ @%SystemRoot%\System32\netcenter.dll,-1 ☰
+<li><p><strong>Pages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page Name</th>
+<th>Opens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Advanced</td>
+<td>Advanced sharing settings</td>
+</tr>
+<tr>
+<td>ShareMedia</td>
+<td>Media streaming options</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</li>
+</ul>
+<h3 id="notification-area-icons">Notification Area Icons</h3>
+Microsoft.NotificationAreaIcons ☰ {05d7b0f4-2121-4eff-bf6b-ed3f69b894d9} ☰ @%SystemRoot%\System32\taskbarcpl.dll,-1 ☰
+</ul>
+<h3 id="pen-and-touch">Pen and Touch</h3>
+Microsoft.PenAndTouch ☰ {F82DF8F7-8B9F-442E-A48C-818EA735FF9B} ☰ @%SystemRoot%\System32\tabletpc.cpl,-10103 ☰
+<li><p><strong>Pages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page Name</th>
+<th>Opens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Flicks</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Handwriting</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</li>
+</ul>
+<h3 id="personalization">Personalization</h3>
+Microsoft.Personalization ☰ {ED834ED6-4B5A-4bfe-8F11-A626DCB6A921} ☰ @%SystemRoot%\System32\themecpl.dll,-1 ☰
+<li><p><strong>Pages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page Name</th>
+<th>Opens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pageColorization</td>
+<td>Color and Appearance</td>
+</tr>
+<tr>
+<td>pageWallpaper</td>
+<td>Desktop Background</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</li>
+</ul>
+<h3 id="phone-and-modem">Phone and Modem</h3>
+Microsoft.PhoneAndModem ☰ {40419485-C444-4567-851A-2DD7BFA1684D} ☰ @%SystemRoot%\System32\telephon.cpl,-1 ☰
+<li>The window that this value launches is titled &quot;Location Information&quot; in versions of Windows prior to Windows 8. The item's UI is considerably changed as of Windows 8.</li>
+</ul>
+<h3 id="power-options">Power Options</h3>
+Microsoft.PowerOptions ☰ {025A5937-A6BE-4686-A844-36FE4BEC8B6D} ☰ @%SystemRoot%\System32\powercpl.dll,-1 ☰
+<li><p><strong>Pages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page Name</th>
+<th>Opens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pageGlobalSettings</td>
+<td>System Settings</td>
+</tr>
+<tr>
+<td>pagePlanSettings</td>
+<td>Edit Plan Settings</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</li>
+</ul>
+<h3 id="programs-and-features">Programs and Features</h3>
+Microsoft.ProgramsAndFeatures ☰ {7b81be6a-ce2b-4676-a29e-eb907a5126c5} ☰ @%systemroot%\system32\appwiz.cpl,-159 ☰
+<li><p><strong>Pages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page Name</th>
+<th>Opens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>::{D450A8A1-9568-45C7-9C0E-B4F9FB4537BD}</td>
+<td>Installed Updates</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</li>
+</ul>
+<h3 id="recovery">Recovery</h3>
+Microsoft.Recovery ☰ {9FE63AFD-59CF-4419-9775-ABCC3849F861} ☰ @%SystemRoot%\System32\recovery.dll,-101 ☰
+</ul>
+<h3 id="region">Region</h3>
+Microsoft.RegionAndLanguage ☰ {62D8ED13-C9D0-4CE8-A914-47DD628FB1B0} ☰ @%SystemRoot%\System32\intl.cpl,-1 ☰
+<li><p>The Region and Language item found in Windows 7 was split as of Windows 8. Microsoft.RegionAndLanguage now launches the Region item. To launch the Language item, use <a href="#location-settings" data-linktype="self-bookmark">Microsoft.Language</a>.</p> </li>
+<li><p><strong>Pages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page Name</th>
+<th>Opens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Location</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Administrative</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</li>
+</ul>
+<h3 id="remoteapp-and-desktop-connections">RemoteApp and Desktop Connections</h3>
+Microsoft.RemoteAppAndDesktopConnections ☰ {241D7C96-F8BF-4F85-B01F-E2B043341A4B} ☰ @%SystemRoot%\System32\tsworkspace.dll,-15300 ☰
+</ul>
+<h3 id="sound">Sound</h3>
+Microsoft.Sound ☰ {F2DDFC82-8F12-4CDD-B7DC-D4FE1425AA4D} ☰ @%SystemRoot%\System32\mmsys.cpl,-300 ☰
+</ul>
+<h3 id="speech-recognition">Speech Recognition</h3>
+Microsoft.SpeechRecognition ☰ {58E3C745-D971-4081-9034-86E34B30836A} ☰ @%SystemRoot%\System32\Speech\SpeechUX\speechuxcpl.dll,-1 ☰
+</ul>
+<h3 id="storage-spaces">Storage Spaces</h3>
+Microsoft.StorageSpaces ☰ {F942C606-0914-47AB-BE56-1321B8035096} ☰ @C:\\Windows\\System32\\SpaceControl.dll,-1 ☰
+</ul>
+<h3 id="sync-center">Sync Center</h3>
+Microsoft.SyncCenter ☰ {9C73F5E5-7AE7-4E32-A8E8-8D23B85255BF} ☰ @%SystemRoot%\System32\SyncCenter.dll,-3000 ☰
+</ul>
+<h3 id="system">System</h3>
+Microsoft.System ☰ {BB06C0E4-D293-4f75-8A90-CB05B6477EEE} ☰ @%SystemRoot%\System32\systemcpl.dll,-1 ☰
+</ul>
+<h3 id="tablet-pc-settings">Tablet PC Settings</h3>
+Microsoft.TabletPCSettings ☰ {80F3F1D5-FECA-45F3-BC32-752C152E456E} ☰ @%SystemRoot%\System32\tabletpc.cpl,-10100 ☰
+</ul>
+<h3 id="taskbar-and-navigation">Taskbar and Navigation</h3>
+Microsoft.Taskbar ☰ {0DF44EAA-FF21-4412-828E-260A8728E7F1} ☰ @%SystemRoot%\system32\shell32.dll,-32517 ☰
+</ul>
+<h3 id="troubleshooting">Troubleshooting</h3>
+Microsoft.Troubleshooting ☰ {C58C4893-3BE0-4B45-ABB5-A63E4B8C8651} ☰ @%SystemRoot%\System32\DiagCpl.dll,-1 ☰
+<li><p><strong>Pages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page Name</th>
+<th>Opens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HistoryPage</td>
+<td>History</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</li>
+</ul>
+<h3 id="tsappinstall">TSAppInstall</h3>
+Microsoft.TSAppInstall ☰ {BAA884F4-3432-48b8-AA72-9BF20EEF31D5} ☰ @%systemroot%\system32\tsappinstall.exe,-2001 ☰
+</ul>
+<h3 id="user-accounts">User Accounts</h3>
+Microsoft.UserAccounts ☰ {60632754-c523-4b62-b45c-4172da012619} ☰ @%SystemRoot%\System32\usercpl.dll,-1 ☰
+</ul>
+<h3 id="windows-anytime-upgrade">Windows Anytime Upgrade</h3>
+Microsoft.WindowsAnytimeUpgrade ☰ {BE122A0E-4503-11DA-8BDE-F66BAD1E3F3A} ☰ @$(resourceString._SYS_MOD_PATH),-1 ☰
+</ul>
+<h3 id="windows-defender">Windows Defender</h3>
+Microsoft.WindowsDefender ☰ {D8559EB9-20C0-410E-BEDA-7ED416AECC2A} ☰ @%ProgramFiles%\Windows Defender\MsMpRes.dll,-104 ☰
+</ul>
+<h3 id="windows-firewall">Windows Firewall</h3>
+Microsoft.WindowsFirewall ☰ {4026492F-2F69-46B8-B9BF-5654FC07E423} ☰ @C:\\Windows\\system32\\FirewallControlPanel.dll,-12122 ☰
+<li><p><strong>Pages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page Name</th>
+<th>Opens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pageConfigureApps</td>
+<td>Allowed apps</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</li>
+</ul>
+<h3 id="windows-mobility-center">Windows Mobility Center</h3>
+Microsoft.MobilityCenter ☰ {5ea4f148-308c-46d7-98a9-49041b1dd468} ☰ @%SystemRoot%\system32\mblctr.exe,-1002 ☰
+</ul>
+<h3 id="windows-to-go">Windows To Go</h3>
+Microsoft.PortableWorkspaceCreator ☰ {8E0C279D-0BD1-43C3-9EBD-31C3DC5B8A77} ☰ @%SystemRoot%\System32\pwcreator.exe,-151 ☰
+</ul>
+<h3 id="windows-update">Windows Update</h3>
+Microsoft.WindowsUpdate ☰ {36eef7db-88ad-4e81-ad49-0e313f0c35f8} ☰ @%SystemRoot%\system32\wucltux.dll,-1 ☰
+<li><p><strong>Pages</strong></p>
+<table>
+<thead>
+<tr>
+<th>Page Name</th>
+<th>Opens</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>pageSettings</td>
+<td>Change settings</td>
+</tr>
+<tr>
+<td>pageUpdateHistory</td>
+<td>View update history</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+</li>
+</ul>
+<h3 id="work-folders">Work Folders</h3>
+Microsoft.WorkFolders ☰ {ECDB0924-4208-451E-8EE0-373C0956DE16} ☰ @C:\\Windows\\System32\\WorkfoldersControl.dll,-1 ☰
+</ul>
+<h2 id="deprecated-control-panel-canonical-names">Deprecated Control Panel Canonical Names</h2>
+<p>The following are canonical names that are no longer in use as of Windows 8.1 or later. Some have been removed altogether. Others have been remapped in these situations:</p>
+ul class="links" data-bi-name="footerlinks">
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/teamblog" data-bi-name="bloglink">Blog</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+			<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+		<li><a data-mscc-ic="false" href="/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+		<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+		<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+    </ul>
+</footer>
+						</div>
+					</div>
+
+					<div id="page-actions" class="right-container column is-one-quarter is-one-fifth-desktop is-hidden-mobile is-hidden-tablet-only" data-bi-name="pageactions" role="complementary" aria-label="Page Actions">
+							<div id="affixed-right-container" class="doc-outline is-fixed is-vertically-scrollable">
+<div data-bi-name="rating" class="feedback-verbatim has-border-bottom has-padding-bottom-small has-margin-bottom-small">
+	<div class="binary-rating">
+		<div class="binary-rating-buttons">
+			<h3 class="has-text-weight-semibold has-margin-top-none has-margin-bottom-small">Is this page helpful?</h3>
+			<div>
+				<button class="thumb-rating like has-inner-focus has-padding-left-extra-small has-padding-right-extra-small" title="Yes" data-bi-name="rating-yes" data-bi-sat="1">
+					<span class="icon docon docon-like" aria-hidden="true"></span><span>Yes</span>
+				</button>
+				<button class="thumb-rating dislike has-inner-focus has-padding-none has-padding-right-extra-small" title="No" data-bi-name="rating-no" data-bi-sat="0" aria-expanded="false" aria-haspopup="true" aria-controls="rating-feedback">
+					<span class="icon docon docon-dislike" aria-hidden="true"></span><span>No</span>
+				</button>
+			</div>
+		</div>
+		<form class="feedback-verbatim-form is-hidden">
+			<div class="verbatim-textarea box is-relative has-box-shadow-none has-border has-margin-top-small has-padding-extra-small is-size-8">
+				<label for="rating-feedback-mobile" class="visually-hidden">Any additional feedback?</label>
+				<textarea id="rating-feedback-mobile" rows="4" maxlength="999" placeholder="Any additional feedback?" required class="textarea has-border-none has-box-shadow-none has-inner-focus"></textarea>
+			</div>
+			<div class="buttons is-right has-margin-top-medium has-margin-right-extra-small">
+				<button class="skip-rating button is-text is-link is-small" type="button">Skip</button>
+				<button disabled class="submit-rating button is-primary is-small" type="submit" data-bi-name="rating-verbatim">Submit</button>
+			</div>
+		</form>
+	</div>
+	<div class="thankyou-rating is-hidden">
+		<p>Thank you.</p>
+	</div>
+</div>								<nav id="side-doc-outline" data-bi-name="intopic toc" role="navigation" aria-label="Article Outline">
+									<h3>In this article</h3>
+								</nav>
+							</div>
+					</div>
+
+					<!--end of div.columns -->
+				</div>
+
+			<!--end of .primary-holder -->
+			</section>
+
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+		</div>
+
+		<!--end of .mainContainer -->
+	</div>
+
+	<div id="openFeedbackContainer" class="openfeedback-container"></div>
+
+	<div class="footerContainer has-default-focus is-hidden-interactive ">
+<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+
+    <a data-mscc-ic="false" class="locale-selector-link" href="#" data-bi-name="select-locale"><span class="icon docon docon-world is-size-4 has-margin-right-small" aria-hidden="true"></span><span class="local-selector-link-text"></span></a>
+
+    <ul class="links" data-bi-name="footerlinks">
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/previous-versions/" data-bi-name="archivelink">Previous Version Docs</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/teamblog" data-bi-name="bloglink">Blog</a></li>
+		<li><a data-mscc-ic="false" href="https://docs.microsoft.com/contribute" data-bi-name="contributorGuide">Contribute</a></li>
+			<li><a data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy &amp; Cookies</a></li>
+		<li><a data-mscc-ic="false" href="/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+		<li><a data-mscc-ic="false" href="https://aka.ms/sitefeedback" data-bi-name="feedback">Site Feedback</a></li>
+		<li><a data-mscc-ic="false" href="https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/EN-US.aspx" data-bi-name="trademarks">Trademarks</a></li>
+    </ul>
+</footer>
+	</div>
+
+	<div id="action-panel" role="region" aria-label="Action Panel" class="action-panel has-default-focus" tabindex="-1"></div>
+</body>
+</html>
