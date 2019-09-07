@@ -1,0 +1,6 @@
+https://superuser.com/a/462225
+   Do not press Win + R.
+   Instead, just press Win and type the command directly into the Metro interface. 
+   As you type, the search interface will start bringing up possible matches, but
+   just ignore them. When you're done typing, press Ctrl + Shift + Enter,
+   and the command will run elevated, as expected.
