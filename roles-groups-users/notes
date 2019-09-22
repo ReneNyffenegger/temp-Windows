@@ -7,3 +7,9 @@ LocalSystemAccount:
   
 How to become Local System
   https://specopssoft.com/blog/how-to-become-the-local-system-account-with-psexec/
+
+
+Name for Admin Group:     BUILTIN\Administrators
+Name for Local System:    NT AUTHORITY\SYSTEM
+Name for Network Service: NT AUTHORITY\NETWORK SERVICE 
+Name for Local Service:   NT AUTHORITY\LOCAL SERVICE
