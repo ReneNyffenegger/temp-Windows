@@ -1,0 +1,3 @@
+Folder and desktop.ini need to have System Attribute.
+  attrib +S desktop.ini
+  attrib +S ..\another-test
