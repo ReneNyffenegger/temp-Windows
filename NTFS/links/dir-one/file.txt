@@ -1,0 +1,1 @@
+This file will be hard linked into ..\dir-two/linked-file.txt (by ..\create-hardlink.bat)
