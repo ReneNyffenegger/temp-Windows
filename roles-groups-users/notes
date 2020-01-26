@@ -1,3 +1,56 @@
+
+
+Local System
+------------
+  Completely trusted account, moreso than the administrator account. 
+
+  There is nothing on a single box that this account can not do
+  -
+  "...From a security perspective, the local system account is extremely powerful - more powerful than any domain or local account."
+
+  Most services run in the security context of the local system account (displayed sometimes as SYSTEM and other times as LocalSystem)
+
+  It has the right to access the network as the machine (this requires Active Directory and granting the machine account permissions to something)
+  It acts as the computer on the network.
+
+  The LocalSystem account is a predefined local account used by the service control manager.
+
+  This account is not recognized by the security subsystem, so you cannot specify its name in a call to the LookupAccountName function.
+
+  Local System is a very high-privileged built-in account.
+
+  The local system account is the same account in which core Windows user-mode
+  operating system components run, including the Session Manager (smss.exe),
+  the Windows subsystem process (csrss.exe), the Local Security Authority
+  process (lsass.exe), and the Logon process (winlogon.exe).
+
+
+  "
+   LocalSystem is the exact same thing as "NT Authority\System".  They are synonyms.
+
+   System is a separate entity that happens to share some (confusion generating) characteristics
+  " 
+
+
+  Tokens
+  ------
+    Its token includes the
+      - NT AUTHORITY\SYSTEM and
+      - BUILTIN\Administrators SIDs
+
+    These  accounts have access to most system objects. 
+
+    The name of the account in all locales is .\LocalSystem
+    LocalSystem or ComputerName\LocalSystem
+
+
+
+NT Authority\System = Local System = SYSTEM = S-1-5-18
+------------------------------------------------------
+   https://serverfault.com/questions/168752/windows-localsystem-vs-system
+
+
+
 https://serverfault.com/questions/168752/windows-localsystem-vs-system
 https://stackoverflow.com/questions/3439760/localsystem-vs-system-vs-local-system-windows-system-accounts
 https://stackoverflow.com/questions/510170/the-difference-between-the-local-system-account-and-the-network-service-acco
