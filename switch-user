@@ -1,0 +1,4 @@
+tsdiscon
+   It does not sign out the previously logged in user,
+   but simply locks his/her account, brings you back to
+   the Logon screen and lets you sign in with a different user account.
