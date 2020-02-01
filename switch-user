@@ -12,7 +12,7 @@ C:\> query session
 
 
 ;; Switch back to Chantal's session???
-C:\> tscon 2           
+C:\> tscon 2   /password:secretGarden        
 
 C:\> change logon /query
 Session logins are currently ENABLED
