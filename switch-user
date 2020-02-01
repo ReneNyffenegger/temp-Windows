@@ -2,3 +2,10 @@ tsdiscon
    It does not sign out the previously logged in user,
    but simply locks his/her account, brings you back to
    the Logon screen and lets you sign in with a different user account.
+
+With new user logged in
+C:\> query session
+ SESSIONNAME       USERNAME                 ID  STATE   TYPE        DEVICE
+ services                                    0  Disc
+>console           Rene                      1  Active
+                   Chantal                   2  Disc
