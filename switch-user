@@ -9,3 +9,13 @@ C:\> query session
  services                                    0  Disc
 >console           Rene                      1  Active
                    Chantal                   2  Disc
+
+
+;; Switch back to Chantal's session???
+C:\> tscon 2           
+
+C:\> change logon /query
+Session logins are currently ENABLED
+
+   ;; https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/change-logon ;;
+   
