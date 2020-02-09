@@ -28,6 +28,8 @@
 #include "shlguid.h"
 #include "strsafe.h"
 
+#include "shlobj_core.h"
+
 #include <iostream>
                             
 int main() {
@@ -138,6 +140,25 @@ int main() {
         WORD hotKey;
         iShellLink -> GetHotkey(&hotKey);
         std::cout << "HotKey:      " << hotKey << std::endl;
+
+
+        IShellLinkDataList *iShellLinkDataList;
+        hres = iShellLink->QueryInterface(IID_IShellLinkDataList, (LPVOID*) &iShellLinkDataList); 
+        if (! SUCCEEDED(hres)) { 
+              std::cout << "QueryInterface(IID_IShellLinkDataList) error" << std::endl;
+              return 0;
+        }
+
+        LPNT_CONSOLE_PROPS pNT_CONSOLE_PROPS;
+        iShellLinkDataList->CopyDataBlock(NT_CONSOLE_PROPS_SIG, (LPVOID*) &pNT_CONSOLE_PROPS);
+
+        std::cout << "Window size (dwWindowSize): " <<
+                     pNT_CONSOLE_PROPS->dwWindowSize.X << "x" << 
+                     pNT_CONSOLE_PROPS->dwWindowSize.Y << std::endl;
+
+        std::cout << "Font size (dwWindowSize): " <<
+                     pNT_CONSOLE_PROPS->dwFontSize.X << "x" << 
+                     pNT_CONSOLE_PROPS->dwFontSize.Y << std::endl;
 
         iPersistFile->Release(); 
         iShellLink->Release(); 
