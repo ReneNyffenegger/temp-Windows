@@ -1,5 +1,6 @@
 //   
 //    cl /nologo /EHsc ResolveIt.cpp ole32.lib
+//    g++ ResolveIt.cpp -lole32
 // 
 //    https://docs.microsoft.com/en-us/windows/win32/shell/links
 //    ----------------------------------------------------------
@@ -41,16 +42,20 @@ int main() {
 
 // HRESULT ResolveIt(HWND hwnd, LPCSTR lpszLinkFile, char* lpszPath, int iPathBufferSize) { 
     HRESULT hres; 
-    IShellLink* psl; 
+    IShellLink* iShellLink; 
+
     TCHAR szGotPath[MAX_PATH]; 
     TCHAR szDescription[MAX_PATH]; 
+
     WIN32_FIND_DATA wfd; 
+
  
    *lpszPath = 0; // Assume failure 
 
-    // Get a pointer to the IShellLink interface. It is assumed that CoInitialize
-    // has already been called. 
-    hres = CoCreateInstance(CLSID_ShellLink, NULL, CLSCTX_INPROC_SERVER, IID_IShellLink, (LPVOID*)&psl); 
+ // Get a pointer to the IShellLink interface. It is assumed that CoInitialize
+ // has already been called. 
+    hres = CoCreateInstance(CLSID_ShellLink, NULL, CLSCTX_INPROC_SERVER, IID_IShellLink, (LPVOID*)&iShellLink); 
+
     if (! SUCCEEDED(hres)) {
 
       std::cout << "CoCreateInstance error" << std::endl;
@@ -60,39 +65,72 @@ int main() {
 
 
 //  { 
-        IPersistFile* ppf; 
+    IPersistFile* iPersistFile; 
  
-        // Get a pointer to the IPersistFile interface. 
-        hres = psl->QueryInterface(IID_IPersistFile, (void**)&ppf); 
+  // Get a pointer to the IPersistFile interface. 
+     hres = iShellLink->QueryInterface(IID_IPersistFile, (void**)&iPersistFile); 
         
-        if (SUCCEEDED(hres)) { 
-            WCHAR wsz[MAX_PATH]; 
+     if (! SUCCEEDED(hres)) { 
+           std::cout << "QueryInterface(IID_IPersistFile) error" << std::endl;
+           return 0;
+     }
+       
+//    WCHAR lnkFile[MAX_PATH]; 
  
-            // Ensure that the string is Unicode. 
-            MultiByteToWideChar(CP_ACP, 0, 
-               "C:\\Users\\OMIS.Rene\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\Command Prompt.lnk",
-//          lpszLinkFile,
-               -1, wsz, MAX_PATH); 
+      wchar_t lnkFile[] = L"C:\\Users\\OMIS.Rene\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\Command Prompt.lnk";
+
+//X    // Ensure that the string is Unicode. 
+//X       MultiByteToWideChar(
+//X             CP_ACP,
+//X             0, 
+//X            "C:\\Users\\OMIS.Rene\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\Command Prompt.lnk",
+//X //          lpszLinkFile,
+//X            -1,
+//X             lnkFile,
+//X             MAX_PATH
+//X      ); 
  
             // Add code here to check return value from MultiByteWideChar 
             // for success.
  
             // Load the shortcut. 
-            hres = ppf->Load(wsz, STGM_READ); 
+       hres = iPersistFile->Load(lnkFile, STGM_READ); 
+
+       if (! SUCCEEDED(hres)) { 
+             std::cout << "QueryInterface(IID_IPersistFile) error" << std::endl;
+             return 0;
+       }
             
-            if (SUCCEEDED(hres)) { 
+//          if (SUCCEEDED(hres)) { 
                 // Resolve the link. 
-                hres = psl->Resolve((HWND) 0, 0); 
+        hres = iShellLink->Resolve((HWND) 0, 0); 
 
-                if (SUCCEEDED(hres)) { 
+        if (! SUCCEEDED(hres)) { 
+             std::cout << "..." << std::endl;
+             return 0;
+        }
+       
                     // Get the path to the link target. 
-                    hres = psl->GetPath(szGotPath, MAX_PATH, (WIN32_FIND_DATA*)&wfd, SLGP_SHORTPATH); 
+        hres = iShellLink->GetPath(
+            szGotPath,
+            MAX_PATH,
+//         (WIN32_FIND_DATA*)&wfd,
+           &wfd,
+            SLGP_SHORTPATH); 
 
-                    if (SUCCEEDED(hres)) { 
-                        // Get the description of the target. 
-                        hres = psl->GetDescription(szDescription, MAX_PATH); 
+         if (! SUCCEEDED(hres)) {
+             std::cout << "...";
+             return 0;
+         }
 
-                        if (SUCCEEDED(hres)) {
+      // Get the description of the target. 
+         hres = iShellLink->GetDescription(szDescription, MAX_PATH); 
+
+        if (! SUCCEEDED(hres)) {
+              return 0;
+        }
+        std::cout << "Description: " << szDescription << std::endl;
+
                             hres = StringCbCopy((STRSAFE_LPSTR) lpszPath, 
                                255, // iPathBufferSize
                                szGotPath
@@ -106,17 +144,17 @@ int main() {
                             {
                                 // Handle the error
                             }
-                        }
-                    }
-                } 
-            } 
+//                      }
+//        }
+//              } 
+//          } 
 
             // Release the pointer to the IPersistFile interface. 
-            ppf->Release(); 
-        } 
+            iPersistFile->Release(); 
+//      } 
 
         // Release the pointer to the IShellLink interface. 
-        psl->Release(); 
+        iShellLink->Release(); 
 
    std::cout << "lpszPath: " << lpszPath << std::endl;
 
