@@ -1,5 +1,5 @@
 //   
-//    cl ResolveIt.cpp ole32.lib
+//    cl /nologo /EHsc ResolveIt.cpp ole32.lib
 // 
 //    https://docs.microsoft.com/en-us/windows/win32/shell/links
 //    ----------------------------------------------------------
@@ -29,7 +29,17 @@
 
 #include <iostream>
                             
-HRESULT ResolveIt(HWND hwnd, LPCSTR lpszLinkFile, char* lpszPath, int iPathBufferSize) { 
+int main() {
+
+   char lpszPath[256];
+   // ResolveIt(0, "C:\\Users\\OMIS.Rene\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\Command Prompt.lnk", lpszPath, 255);
+
+   if (::CoInitializeEx(0, COINIT_MULTITHREADED) != S_OK) {
+      std::cout << "CoInitializeEx error" << std::endl;
+      return 1;
+   }
+
+// HRESULT ResolveIt(HWND hwnd, LPCSTR lpszLinkFile, char* lpszPath, int iPathBufferSize) { 
     HRESULT hres; 
     IShellLink* psl; 
     TCHAR szGotPath[MAX_PATH]; 
@@ -59,7 +69,10 @@ HRESULT ResolveIt(HWND hwnd, LPCSTR lpszLinkFile, char* lpszPath, int iPathBuffe
             WCHAR wsz[MAX_PATH]; 
  
             // Ensure that the string is Unicode. 
-            MultiByteToWideChar(CP_ACP, 0, lpszLinkFile, -1, wsz, MAX_PATH); 
+            MultiByteToWideChar(CP_ACP, 0, 
+               "C:\\Users\\OMIS.Rene\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\Command Prompt.lnk",
+//          lpszLinkFile,
+               -1, wsz, MAX_PATH); 
  
             // Add code here to check return value from MultiByteWideChar 
             // for success.
@@ -69,7 +82,7 @@ HRESULT ResolveIt(HWND hwnd, LPCSTR lpszLinkFile, char* lpszPath, int iPathBuffe
             
             if (SUCCEEDED(hres)) { 
                 // Resolve the link. 
-                hres = psl->Resolve(hwnd, 0); 
+                hres = psl->Resolve((HWND) 0, 0); 
 
                 if (SUCCEEDED(hres)) { 
                     // Get the path to the link target. 
@@ -80,7 +93,11 @@ HRESULT ResolveIt(HWND hwnd, LPCSTR lpszLinkFile, char* lpszPath, int iPathBuffe
                         hres = psl->GetDescription(szDescription, MAX_PATH); 
 
                         if (SUCCEEDED(hres)) {
-                            hres = StringCbCopy((STRSAFE_LPSTR) lpszPath, iPathBufferSize, szGotPath);
+                            hres = StringCbCopy((STRSAFE_LPSTR) lpszPath, 
+                               255, // iPathBufferSize
+                               szGotPath
+                            );
+
                             if (SUCCEEDED(hres))
                             {
                                 // Handle success
@@ -100,20 +117,14 @@ HRESULT ResolveIt(HWND hwnd, LPCSTR lpszLinkFile, char* lpszPath, int iPathBuffe
 
         // Release the pointer to the IShellLink interface. 
         psl->Release(); 
-//  } 
-    return hres; 
-}
-
-int main() {
-
-   if (::CoInitializeEx(0, COINIT_MULTITHREADED) != S_OK) {
-      std::cout << "CoInitializeEx error" << std::endl;
-      return 1;
-   }
-
-   char lpszPath[256];
-   ResolveIt(0, "C:\\Users\\OMIS.Rene\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\System Tools\\Command Prompt.lnk", lpszPath, 255);
 
    std::cout << "lpszPath: " << lpszPath << std::endl;
 
+//  } 
+//    return hres; 
 }
+
+
+
+
+
