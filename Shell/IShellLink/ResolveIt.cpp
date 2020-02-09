@@ -134,6 +134,11 @@ int main() {
         std::cout << "Description: " << description << std::endl;
         std::cout << "link Target: " << linkTarget  << std::endl;
 
+
+        WORD hotKey;
+        iShellLink -> GetHotkey(&hotKey);
+        std::cout << "HotKey:      " << hotKey << std::endl;
+
         iPersistFile->Release(); 
         iShellLink->Release(); 
 }
