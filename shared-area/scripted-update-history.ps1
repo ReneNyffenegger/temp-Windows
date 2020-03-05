@@ -1,3 +1,5 @@
+$wuSess   = new-object -comObject Microsoft.Update.Session
+$wuSearch = $wuSess.createUpdateSearcher()
 PS C:\Windows\system32> $wuSearch.search("isInstalled=1").updates | select-object lastDeploymentChangeTime, title
 
 LastDeploymentChangeTime Title
