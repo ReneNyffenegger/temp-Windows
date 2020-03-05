@@ -1,0 +1,153 @@
+PS C:\Windows\system32> reg query hklm /s /f windowsupdate
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\AppUserModelId\Windows.SystemToast.WindowsUpdate.Notification
+    IconUri    REG_EXPAND_SZ    %SystemRoot%\system32\@WindowsUpdateToastIcon.png
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{C2E88C2F-6F5B-4AAA-894B-55C847AD3A2D}
+    (Default)    REG_SZ    WindowsUpdateAgentInfo Class
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\DeviceDisplayObject\InterfaceClass\{70FFD812-4C7F-4C7D-926A-637B7DD852AF}\Shell\WindowsUpdate
+    OpenControlPanel    REG_SZ    Microsoft.WindowsUpdate
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Interface\{071BBEDF-9FEE-534D-88A1-0EDA4AE8FCF4}
+    (Default)    REG_SZ    __FIIterable_1_WindowsUpdate__CInternal__CFulfillmentDataInfo
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Interface\{186BFAA8-6E37-5017-B378-3A5D53CCB6AC}
+    (Default)    REG_SZ    __FIIterable_1_WindowsUpdate__CInternal__CIInstallItem
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Interface\{187CE2BE-65E0-596A-9666-E901830C2E93}
+    (Default)    REG_SZ    __FIIterator_1_WindowsUpdate__CInternal__CIInstallItem
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Interface\{2BBB3828-8937-551B-BD1E-0451A636AC14}
+    (Default)    REG_SZ    __FIMap_2_HSTRING_WindowsUpdate__CInternal__CIFulfillmentDataInfo
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Interface\{3C0D3472-94C0-4FC6-A5C0-DDF3265A057D}
+    (Default)    REG_SZ    __x_WindowsUpdate_CInternal_CIInstallWork
+
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Interface\{E052B90B-43CD-5101-82F8-A07C8916634E}
+    (Default)    REG_SZ    __FIIterator_1___FIKeyValuePair_2_HSTRING_WindowsUpdate__CInternal__CIFulfillmentDataInfo
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Microsoft.Update.AgentInfo
+    (Default)    REG_SZ    WindowsUpdateAgentInfo Class
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\Microsoft.Update.AgentInfo.1
+    (Default)    REG_SZ    WindowsUpdateAgentInfo Class
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\WOW6432Node\CLSID\{C2E88C2F-6F5B-4AAA-894B-55C847AD3A2D}
+    (Default)    REG_SZ    WindowsUpdateAgentInfo Class
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\WOW6432Node\Interface\{071BBEDF-9FEE-534D-88A1-0EDA4AE8FCF4}
+    (Default)    REG_SZ    __FIIterable_1_WindowsUpdate__CInternal__CFulfillmentDataInfo
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\WOW6432Node\Interface\{0BCFA15F-21B2-5325-94A6-BBAD05C8E810}
+    (Default)    REG_SZ    __FIIterable_1_WindowsUpdate__CInternal__CIFulfillmentDataInfo
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Classes\WOW6432Node\Interface\{0D512BC7-D05F-55C5-B40A-B1E269C5114D}
+    (Default)    REG_SZ    __FITypedEventHandler_2_WindowsUpdate__CInternal__CIInstallControl_WindowsUpdate__CInternal__CIInstallItem
+
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Provisioning\CSPs\.\cimv2\Win32_WindowsUpdateAgentVersion
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SystemSettings\SettingId\SystemSettings_MusUpdate_AllowAutoWindowsUpdateDownloadOverMeteredNetwork
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModel\PackageStreamingSources
+    x-windowsupdate    REG_SZ    {b8fc52f5-cb03-4e10-8bcb-e3ec794c54a5}
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\ComponentDetect\amd64_microsoft-windows-s..e-windowsupdateauth_31bf3856ad364e35_0.0.0.0_none_7ea3eb99ff71a462
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\ComponentDetect\amd64_microsoft-windows-windowsupdate-adm_31bf3856ad364e35_0.0.0.0_none_eb6ca4ff13465505
+
+H....
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\WindowsUpdate
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\PushNotifications\Applications\Windows.SystemToast.WindowsUpdate.Notification
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-s..e-windowsupdateauth_31bf3856ad364e35_none_3d4cfdadebc7819a
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-windowsupdate-adm_31bf3856ad364e35_none_273e14203ee8c34f
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide\Winners\amd64_microsoft-windows-windowsupdateclient_31bf3856ad364e35_none_867f25c21a6f4dc5
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\SideBySide\Winners\wow64_microsoft-windows-windowsupdateclient_31bf3856ad364e35_none_90d3d0144ed00fc0
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Microsoft-Windows-WindowsUpdateClient/Analytic
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\Microsoft-Windows-WindowsUpdateClient/Operational
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{945a8954-c147-4acd-923f-40c45405a658}
+    (Default)    REG_SZ    Microsoft-Windows-WindowsUpdateClient
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{945a8954-c147-4acd-923f-40c45405a658}\ChannelReferences\1
+    (Default)    REG_SZ    Microsoft-Windows-WindowsUpdateClient/Operational
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WINEVT\Publishers\{945a8954-c147-4acd-923f-40c45405a658}\ChannelReferences\2
+    (Default)    REG_SZ    Microsoft-Windows-WindowsUpdateClient/Analytic
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Print
+    DoNotInstallCompatibleDriverFromWindowsUpdate    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tasks\{EF521673-1858-4304-826B-E054707F0CF5}
+    Path    REG_SZ    \Microsoft\Windows\WindowsUpdate\Scheduled Start
+    URI    REG_SZ    \Microsoft\Windows\WindowsUpdate\Scheduled Start
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\TaskCache\Tree\Microsoft\Windows\WindowsUpdate
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsRuntime\ActivatableClassId\WindowsUpdate.Internal.InstallControl
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsSelfHost\OneSettings
+    TargetingAttributes    REG_SZ    {
+  "Version": 82,
+  "SchemaVersion": 1,
+  ....
+  
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\Orchestrator\USOShared\RegPathsInHKLMToDump
+    Software\Microsoft\Windows\CurrentVersion\WindowsUpdate    REG_SZ
+    Software\Microsoft\WindowsUpdate    REG_SZ
+    Software\Policies\Microsoft\Windows\WindowsUpdate    REG_SZ
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\Orchestrator\USOShared\StaticFilePathsToDump
+    C:\Data\ProgramData\SoftwareDistribution\Logs\WindowsUpdate\*.etl    REG_DWORD    0x3
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsUpdate\UX\Settings
+    AllowAutoWindowsUpdateDownloadOverMeteredNetwork    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Explorer\WindowsUpdate
+
+HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows NT\CurrentVersion\Print
+    DoNotInstallCompatibleDriverFromWindowsUpdate    REG_DWORD    0x0
+
+HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\WindowsRuntime\ActivatableClassId\WindowsUpdate.Internal.InstallControl
+
+HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\WindowsUpdate
+
+HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Classes\CLSID\{C2E88C2F-6F5B-4AAA-894B-55C847AD3A2D}
+    (Default)    REG_SZ    WindowsUpdateAgentInfo Class
+
+    ....
+
+HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Classes\Interface\{E052B90B-43CD-5101-82F8-A07C8916634E}
+    (Default)    REG_SZ    __FIIterator_1___FIKeyValuePair_2_HSTRING_WindowsUpdate__CInternal__CIFulfillmentDataInfo
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Ubpm
+    CriticalTask_WUScheduledStart    REG_SZ    NT TASK\Microsoft\Windows\WindowsUpdate\Scheduled Start
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\EventLog\System\Microsoft-Windows-WindowsUpdateClient
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\WbioSrvc\WBDI
+    WindowsUpdateDriverServicing    REG_DWORD    0x1
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Ubpm
+    CriticalTask_WUScheduledStart    REG_SZ    NT TASK\Microsoft\Windows\WindowsUpdate\Scheduled Start
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EventLog\System\Microsoft-Windows-WindowsUpdateClient
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WbioSrvc\WBDI
+    WindowsUpdateDriverServicing    REG_DWORD    0x1
+
+End of search: 290 match(es) found.
