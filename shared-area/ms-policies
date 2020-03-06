@@ -1,0 +1,9 @@
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Cryptography
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\PeerDist
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Peernet
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\SystemCertificates
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\TPM
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender
+HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT
