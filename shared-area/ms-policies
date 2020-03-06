@@ -1,17 +1,18 @@
-HKEY_LOCAL_MACHINE\SYSTEM\ActivationBroker
-HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001
-HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase
-HKEY_LOCAL_MACHINE\SYSTEM\HardwareConfig
-HKEY_LOCAL_MACHINE\SYSTEM\Input
-HKEY_LOCAL_MACHINE\SYSTEM\Keyboard Layout
-HKEY_LOCAL_MACHINE\SYSTEM\Maps
-HKEY_LOCAL_MACHINE\SYSTEM\MountedDevices
-HKEY_LOCAL_MACHINE\SYSTEM\ResourceManager
-HKEY_LOCAL_MACHINE\SYSTEM\ResourcePolicyStore
-HKEY_LOCAL_MACHINE\SYSTEM\RNG
-HKEY_LOCAL_MACHINE\SYSTEM\Select
-HKEY_LOCAL_MACHINE\SYSTEM\Setup
-HKEY_LOCAL_MACHINE\SYSTEM\Software
-HKEY_LOCAL_MACHINE\SYSTEM\WaaS
-HKEY_LOCAL_MACHINE\SYSTEM\WPA
-HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\AssignedAccessConfiguration
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\AssignedAccessCsp
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\ClickNote
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\Dwm
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\DynamicManagement
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\EnterpriseResourceManager
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\Heat
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\HTML Help
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\ITStorage
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\ScheduledDiagnostics
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\ScriptedDiagnosticsProvider
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\Shell
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\Tablet PC
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\TabletPC
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\UpdateApi
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\Windows Error Reporting
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\Windows Search
