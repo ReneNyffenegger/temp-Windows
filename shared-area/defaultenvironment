@@ -1,0 +1,3 @@
+ Path    REG_EXPAND_SZ    %USERPROFILE%\AppData\Local\Microsoft\WindowsApps;
+    TEMP    REG_EXPAND_SZ    %USERPROFILE%\AppData\Local\Temp
+    TMP    REG_EXPAND_SZ    %USERPROFILE%\AppData\Local\Temp
