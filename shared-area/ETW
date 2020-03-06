@@ -1,2 +1,1 @@
-https://github.com/wbenny/EtwConsumerNT
---> Simple project that demonstrates how an ETW consumer can be created just by using NTDLL 
+The https://github.com/wbenny[author's (Petr Beneš)] goal was to understand how functions like StartTrace, OpenTrace, EnableTrace and ProcessTrace work internally.
