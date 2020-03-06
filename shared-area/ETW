@@ -1,6 +1,0 @@
-NTSTATUS 
-NtTraceEvent (
-    HANDLE TraceHandle, 
-    ULONG Flags,
-    ULONG FieldSize, 
-    PVOID Fields);
