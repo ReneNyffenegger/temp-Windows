@@ -1,1 +1,8 @@
-The https://github.com/wbenny[author's (Petr Beneš)] goal was to understand how functions like StartTrace, OpenTrace, EnableTrace and ProcessTrace work internally.
+NTSTATUS 
+NtTraceControl (
+    ULONG FunctionCode, 
+    PVOID InBuffer, 
+    ULONG InBufferLen, 
+    PVOID OutBuffer, 
+    ULONG OutBufferLen, 
+    ULONG *ReturnSize);
