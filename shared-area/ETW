@@ -1,8 +1,6 @@
 NTSTATUS 
-NtTraceControl (
-    ULONG FunctionCode, 
-    PVOID InBuffer, 
-    ULONG InBufferLen, 
-    PVOID OutBuffer, 
-    ULONG OutBufferLen, 
-    ULONG *ReturnSize);
+NtTraceEvent (
+    HANDLE TraceHandle, 
+    ULONG Flags,
+    ULONG FieldSize, 
+    PVOID Fields);
