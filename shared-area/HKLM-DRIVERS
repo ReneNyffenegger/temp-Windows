@@ -1,0 +1,260 @@
+C:\Windows\System32>reg query hklm /s /f toshiba
+
+HKEY_LOCAL_MACHINE\DRIVERS\DriverDatabase\DeviceIds\MF\TOSHIBAC21_DEV0
+
+HKEY_LOCAL_MACHINE\DRIVERS\DriverDatabase\DeviceIds\PCMCIA\Toshiba-IPC5011B_Noteworthy_Fax_Modem_56_PC_Card-0098-100A
+
+HKEY_LOCAL_MACHINE\DRIVERS\DriverDatabase\DeviceIds\PCMCIA\Toshiba-IPC5011B_Noteworthy_Fax_Modem_56_PC_Card-A966
+
+HKEY_LOCAL_MACHINE\DRIVERS\DriverDatabase\DeviceIds\PCMCIA\TOSHIBA-IPC5026A_PHS64CARD-C771
+
+HKEY_LOCAL_MACHINE\DRIVERS\DriverDatabase\DeviceIds\PCMCIA\TOSHIBA-NOTEWORTHY_FAX_MODEM_56_PC_CARD-0098-100A
+
+HKEY_LOCAL_MACHINE\DRIVERS\DriverDatabase\DeviceIds\PCMCIA\TOSHIBA-NOTEWORTHY_FAX_MODEM_56_PC_CARD-7DC6
+
+HKEY_LOCAL_MACHINE\DRIVERS\DriverDatabase\DeviceIds\PCMCIA\Toshiba_America-3CXM056-BNW-DA52
+
+HKEY_LOCAL_MACHINE\DRIVERS\DriverDatabase\DriverPackages\bth.inf_amd64_ad8bf087dcec9e08\Descriptors\USB\Vid_0930&Pid_0502&Rev_1350
+    Manufacturer    REG_SZ    TOSHIBA
+    Description    REG_SZ    TOSHIBA Integrated Bluetooth
+
+HKEY_LOCAL_MACHINE\DRIVERS\DriverDatabase\DriverPackages\bth.inf_amd64_ad8bf087dcec9e08\Descriptors\USB\Vid_0930&Pid_0505
+    Manufacturer    REG_SZ    TOSHIBA
+    Description    REG_SZ    TOSHIBA Integrated Bluetooth 2
+
+HKEY_LOCAL_MACHINE\DRIVERS\DriverDatabase\DriverPackages\bth.inf_amd64_ad8bf087dcec9e08\Descriptors\USB\VID_0930&PID_0506
+    Manufacturer    REG_SZ    TOSHIBA
+    Description    REG_SZ    TOSHIBA Integrated Bluetooth 3
+
+HKEY_LOCAL_MACHINE\DRIVERS\DriverDatabase\DriverPackages\bth.inf_amd64_ad8bf087dcec9e08\Descriptors\USB\Vid_0930&Pid_0507
+    Manufacturer    REG_SZ    TOSHIBA
+    Description    REG_SZ    TOSHIBA Bluetooth Adapter
+
+HKEY_LOCAL_MACHINE\DRIVERS\DriverDatabase\DriverPackages\bth.inf_amd64_ad8bf087dcec9e08\Descriptors\USB\Vid_0930&Pid_0508
+    Manufacturer    REG_SZ    TOSHIBA
+    Description    REG_SZ    TOSHIBA Bluetooth Adapter
+
+HKEY_LOCAL_MACHINE\DRIVERS\DriverDatabase\DriverPackages\bth.inf_amd64_ad8bf087dcec9e08\Descriptors\USB\Vid_0930&Pid_0509
+    Manufacturer    REG_SZ    TOSHIBA
+    Description    REG_SZ    TOSHIBA Bluetooth adapter
+
+HKEY_LOCAL_MACHINE\DRIVERS\DriverDatabase\DriverPackages\mdmusrk1.inf_amd64_34aaf66e3bad61a3\Descriptors\MF\TOSHIBAC21_DEV0
+
+HKEY_LOCAL_MACHINE\DRIVERS\DriverDatabase\DriverPackages\mdmusrk1.inf_amd64_34aaf66e3bad61a3\Descriptors\PCMCIA\Toshiba-IPC5011B_Noteworthy_Fax_Modem_56_PC_Card-0098-100A
+
+HKEY_LOCAL_MACHINE\DRIVERS\DriverDatabase\DriverPackages\mdmusrk1.inf_amd64_34aaf66e3bad61a3\Descriptors\PCMCIA\Toshiba-IPC5011B_Noteworthy_Fax_Modem_56_PC_Card-A966
+
+HKEY_LOCAL_MACHINE\DRIVERS\DriverDatabase\DriverPackages\mdmwhql0.inf_amd64_4a8efa0abef3a776\Descriptors\PCMCIA\Toshiba_America-3CXM056-BNW-DA52
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Portable Devices\Devices\SWD#WPDBUSENUM#{ABC9A770-5F92-11EA-903D-5C514FE5028A}#0000000000100000
+    FriendlyName    REG_SZ    TOSHIBA EXT
+
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Search\VolumeInfoCache\E:
+    VolumeLabel    REG_SZ    TOSHIBA EXT
+
+HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\Windows Search\VolumeInfoCache\E:
+    VolumeLabel    REG_SZ    TOSHIBA EXT
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\DeviceClasses\{53f56307-b6bf-11d0-94f2-00a0c91efb8b}\##?#USBSTOR#Disk&Ven_TOSHIBA&Prod_External_USB_3.0&Rev_0#20160603001495C&0#{53f56307-b6bf-11d0-94f2-00a0c91efb8b}
+    DeviceInstance    REG_SZ    USBSTOR\Disk&Ven_TOSHIBA&Prod_External_USB_3.0&Rev_0\20160603001495C&0
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\DeviceClasses\{7fccc86c-228a-40ad-8a58-f590af7bfdce}\##?#USBSTOR#Disk&Ven_TOSHIBA&Prod_External_USB_3.0&Rev_0#20160603001495C&0#{7fccc86c-228a-40ad-8a58-f590af7bfdce}
+    DeviceInstance    REG_SZ    USBSTOR\Disk&Ven_TOSHIBA&Prod_External_USB_3.0&Rev_0\20160603001495C&0
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\DeviceContainers\{4e0bf11c-c3e8-537f-be1d-5458317b1f1e}\BaseContainers\{4e0bf11c-c3e8-537f-be1d-5458317b1f1e}
+    USBSTOR\Disk&Ven_TOSHIBA&Prod_External_USB_3.0&Rev_0\20160603001495C&0    REG_NONE
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\PnP\Pci\CardList
+    Toshiba    REG_BINARY    01000000791101060000000000000000
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Enum\SWD\WPDBUSENUM\{abc9a770-5f92-11ea-903d-5c514fe5028a}#0000000000100000
+    Mfg    REG_SZ    TOSHIBA
+    FriendlyName    REG_SZ    TOSHIBA EXT
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Enum\USBSTOR\Disk&Ven_TOSHIBA&Prod_External_USB_3.0&Rev_0
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Enum\USBSTOR\Disk&Ven_TOSHIBA&Prod_External_USB_3.0&Rev_0\20160603001495C&0
+    HardwareID    REG_MULTI_SZ    USBSTOR\DiskTOSHIBA_External_USB_3.00___\0USBSTOR\DiskTOSHIBA_External_USB_3.0\0USBSTOR\DiskTOSHIBA_\0USBSTOR\TOSHIBA_External_USB_3.00\0TOSHIBA_External_USB_3.00\0USBSTOR\GenDisk\0GenDisk
+    FriendlyName    REG_SZ    TOSHIBA External USB 3.0 USB Device
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\Disk\Enum
+    1    REG_SZ    USBSTOR\Disk&Ven_TOSHIBA&Prod_External_USB_3.0&Rev_0\20160603001495C&0
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\EhStorClass\Enum
+    1    REG_SZ    USBSTOR\Disk&Ven_TOSHIBA&Prod_External_USB_3.0&Rev_0\20160603001495C&0
+
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Services\SynTP\Parameters\PNPDisableExclusionList
+    Toshiba_01    REG_SZ    HID\TOS_BT_MOU_0004&0005
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DeviceIds\SCSI\DiskToshiba_SD_Mem_Driver___
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DeviceIds\SCSI\ProcessorTOSHIBA_DMC2.0__________
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DeviceIds\SCSI\ProcessorTOSHIBA_DMC2.0___________B01
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DeviceIds\SCSI\ProcessorTOSHIBA_DMC2.0___________C00
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DeviceIds\SCSI\ProcessorTOSHIBA_DMC2.1__________
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DeviceIds\SCSI\ProcessorTOSHIBA_DMC2.1___________A00
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DeviceIds\SCSI\ProcessorTOSHIBA_DMC2.1___________Q01
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DeviceIds\SCSI\ProcessorTOSHIBA_DMC_________________
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DeviceIds\SCSI\ProcessorTOSHIBA_SMC2.0__________
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DeviceIds\SCSI\ProcessorTOSHIBA_SMC2.1__________
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DeviceIds\SCSI\ProcessorTOSHIBA_SMC_________________
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverInfFiles\storufs.inf
+    Configurations    REG_MULTI_SZ    UfsInstall\0UfsIntelBxtA1Install\0UfsIntelBxtB1Install\0UfsIntelLKFInstall\0UfsIntelEHLInstall\0UfsQualcomm8996Install\0UfsToshibaFPGAInstall
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\disk.inf_amd64_4ab6ec3355375ffc\Descriptors\SCSI\DiskToshiba_SD_Mem_Driver___
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\keyboard.inf_amd64_08ff7c9c7156bc90\Descriptors\HID\VID_06D5&PID_4000
+    Manufacturer    REG_SZ    %toshiba%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\keyboard.inf_amd64_08ff7c9c7156bc90\Strings
+    toshiba    REG_SZ    Toshiba
+    hid\vid_06d5&pid_4000.devicedesc    REG_SZ    Toshiba USB 109 Japanese keyboard
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\keyboard.inf_amd64_ea49c08464284354\Descriptors\HID\VID_06D5&PID_4000
+    Manufacturer    REG_SZ    %toshiba%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\keyboard.inf_amd64_ea49c08464284354\Strings
+    toshiba    REG_SZ    Toshiba
+    hid\vid_06d5&pid_4000.devicedesc    REG_SZ    Toshiba USB 109 Japanese keyboard
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\machine.inf_amd64_8c0befd3f2017423\Descriptors\PCI\VEN_1179&DEV_0601
+    Manufacturer    REG_SZ    %toshiba_mfg%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\machine.inf_amd64_8c0befd3f2017423\Descriptors\PCI\VEN_1179&DEV_0602
+    Manufacturer    REG_SZ    %toshiba_mfg%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\machine.inf_amd64_8c0befd3f2017423\Descriptors\PCI\VEN_1179&DEV_0603
+    Manufacturer    REG_SZ    %toshiba_mfg%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\machine.inf_amd64_8c0befd3f2017423\Descriptors\PCI\VEN_1179&DEV_0611
+    Manufacturer    REG_SZ    %toshiba_mfg%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\machine.inf_amd64_8c0befd3f2017423\Descriptors\PCI\VEN_1179&DEV_0618
+    Manufacturer    REG_SZ    %toshiba_mfg%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\machine.inf_amd64_8c0befd3f2017423\Strings
+    toshiba_mfg    REG_SZ    Toshiba
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\machine.inf_amd64_fe9663909da73523\Descriptors\PCI\VEN_1179&DEV_0601
+    Manufacturer    REG_SZ    %toshiba_mfg%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\machine.inf_amd64_fe9663909da73523\Descriptors\PCI\VEN_1179&DEV_0602
+    Manufacturer    REG_SZ    %toshiba_mfg%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\machine.inf_amd64_fe9663909da73523\Descriptors\PCI\VEN_1179&DEV_0603
+    Manufacturer    REG_SZ    %toshiba_mfg%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\machine.inf_amd64_fe9663909da73523\Descriptors\PCI\VEN_1179&DEV_0611
+    Manufacturer    REG_SZ    %toshiba_mfg%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\machine.inf_amd64_fe9663909da73523\Descriptors\PCI\VEN_1179&DEV_0618
+    Manufacturer    REG_SZ    %toshiba_mfg%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\machine.inf_amd64_fe9663909da73523\Strings
+    toshiba_mfg    REG_SZ    Toshiba
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\pcmcia.inf_amd64_ca63eeb4063365ba\Descriptors\PCI\VEN_1179&DEV_060A
+    Manufacturer    REG_SZ    %toshiba%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\pcmcia.inf_amd64_ca63eeb4063365ba\Descriptors\PCI\VEN_1179&DEV_060F
+    Manufacturer    REG_SZ    %toshiba%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\pcmcia.inf_amd64_ca63eeb4063365ba\Descriptors\PCI\VEN_1179&DEV_0617
+    Manufacturer    REG_SZ    %toshiba%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\pcmcia.inf_amd64_ca63eeb4063365ba\Strings
+    toshiba    REG_SZ    Toshiba
+    pci\ven_1179&dev_0617.devicedesc    REG_SZ    Toshiba ToPIC100 CardBus Controller
+    pci\ven_1179&dev_060a.devicedesc    REG_SZ    Toshiba ToPIC95 CardBus Controller
+    pci\ven_1179&dev_060f.devicedesc    REG_SZ    Toshiba ToPIC97 CardBus Controller
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\scsidev.inf_amd64_e421205aaa90af04\Descriptors\SCSI\ProcessorTOSHIBA_DMC2.0__________
+    Manufacturer    REG_SZ    %toshiba%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\scsidev.inf_amd64_e421205aaa90af04\Descriptors\SCSI\ProcessorTOSHIBA_DMC2.0___________B01
+    Manufacturer    REG_SZ    %toshiba%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\scsidev.inf_amd64_e421205aaa90af04\Descriptors\SCSI\ProcessorTOSHIBA_DMC2.0___________C00
+    Manufacturer    REG_SZ    %toshiba%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\scsidev.inf_amd64_e421205aaa90af04\Descriptors\SCSI\ProcessorTOSHIBA_DMC2.1__________
+    Manufacturer    REG_SZ    %toshiba%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\scsidev.inf_amd64_e421205aaa90af04\Descriptors\SCSI\ProcessorTOSHIBA_DMC2.1___________A00
+    Manufacturer    REG_SZ    %toshiba%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\scsidev.inf_amd64_e421205aaa90af04\Descriptors\SCSI\ProcessorTOSHIBA_DMC2.1___________Q01
+    Manufacturer    REG_SZ    %toshiba%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\scsidev.inf_amd64_e421205aaa90af04\Descriptors\SCSI\ProcessorTOSHIBA_DMC_________________
+    Manufacturer    REG_SZ    %toshiba%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\scsidev.inf_amd64_e421205aaa90af04\Descriptors\SCSI\ProcessorTOSHIBA_SMC2.0__________
+    Manufacturer    REG_SZ    %toshiba%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\scsidev.inf_amd64_e421205aaa90af04\Descriptors\SCSI\ProcessorTOSHIBA_SMC2.1__________
+    Manufacturer    REG_SZ    %toshiba%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\scsidev.inf_amd64_e421205aaa90af04\Descriptors\SCSI\ProcessorTOSHIBA_SMC_________________
+    Manufacturer    REG_SZ    %toshiba%
+    Description    REG_SZ    %toshibasmc.devicedesc%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\scsidev.inf_amd64_e421205aaa90af04\Strings
+    toshibasmc.devicedesc    REG_SZ    SMC SCSI Processor Device
+    toshiba    REG_SZ    Toshiba
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\storufs.inf_amd64_e480e97d8dba9d9b\Configurations\UfsToshibaFPGAInstall
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\storufs.inf_amd64_e480e97d8dba9d9b\Descriptors\PCI\VEN_1179&DEV_7012&REV_00
+    Configuration    REG_SZ    UfsToshibaFPGAInstall
+    Manufacturer    REG_SZ    %toshiba%
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\storufs.inf_amd64_e480e97d8dba9d9b\Strings
+    pci\ven_1179&dev_7012&rev_00    REG_SZ    Toshiba Universal Flash Storage (UFS) FPGA Host Controller
+    toshiba    REG_SZ    Toshiba
+
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase\DriverPackages\synpd.inf_amd64_638cf613aa734cba\Configurations\LENOVO_GROUP38_InterTouch_Win8_Inst\Services\SynTP\Parameters\PNPDisableExclusionList
+    Toshiba_01    REG_SZ    HID\TOS_BT_MOU_0004&0005
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceClasses\{53f56307-b6bf-11d0-94f2-00a0c91efb8b}\##?#USBSTOR#Disk&Ven_TOSHIBA&Prod_External_USB_3.0&Rev_0#20160603001495C&0#{53f56307-b6bf-11d0-94f2-00a0c91efb8b}
+    DeviceInstance    REG_SZ    USBSTOR\Disk&Ven_TOSHIBA&Prod_External_USB_3.0&Rev_0\20160603001495C&0
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceClasses\{7fccc86c-228a-40ad-8a58-f590af7bfdce}\##?#USBSTOR#Disk&Ven_TOSHIBA&Prod_External_USB_3.0&Rev_0#20160603001495C&0#{7fccc86c-228a-40ad-8a58-f590af7bfdce}
+    DeviceInstance    REG_SZ    USBSTOR\Disk&Ven_TOSHIBA&Prod_External_USB_3.0&Rev_0\20160603001495C&0
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\DeviceContainers\{4e0bf11c-c3e8-537f-be1d-5458317b1f1e}\BaseContainers\{4e0bf11c-c3e8-537f-be1d-5458317b1f1e}
+    USBSTOR\Disk&Ven_TOSHIBA&Prod_External_USB_3.0&Rev_0\20160603001495C&0    REG_NONE
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PnP\Pci\CardList
+    Toshiba    REG_BINARY    01000000791101060000000000000000
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\SWD\WPDBUSENUM\{abc9a770-5f92-11ea-903d-5c514fe5028a}#0000000000100000
+    Mfg    REG_SZ    TOSHIBA
+    FriendlyName    REG_SZ    TOSHIBA EXT
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USBSTOR\Disk&Ven_TOSHIBA&Prod_External_USB_3.0&Rev_0
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Enum\USBSTOR\Disk&Ven_TOSHIBA&Prod_External_USB_3.0&Rev_0\20160603001495C&0
+    HardwareID    REG_MULTI_SZ    USBSTOR\DiskTOSHIBA_External_USB_3.00___\0USBSTOR\DiskTOSHIBA_External_USB_3.0\0USBSTOR\DiskTOSHIBA_\0USBSTOR\TOSHIBA_External_USB_3.00\0TOSHIBA_External_USB_3.00\0USBSTOR\GenDisk\0GenDisk
+    FriendlyName    REG_SZ    TOSHIBA External USB 3.0 USB Device
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Disk\Enum
+    1    REG_SZ    USBSTOR\Disk&Ven_TOSHIBA&Prod_External_USB_3.0&Rev_0\20160603001495C&0
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\EhStorClass\Enum
+    1    REG_SZ    USBSTOR\Disk&Ven_TOSHIBA&Prod_External_USB_3.0&Rev_0\20160603001495C&0
+
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\SynTP\Parameters\PNPDisableExclusionList
+    Toshiba_01    REG_SZ    HID\TOS_BT_MOU_0004&0005
+
+End of search: 121 match(es) found.
