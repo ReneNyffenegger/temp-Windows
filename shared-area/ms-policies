@@ -1,16 +1,17 @@
-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Appx
-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\BITS
-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\CurrentVersion
-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection
-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DriverSearching
-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\EnhancedStorageDevices
-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\IPSec
-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Network Connections
-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkConnectivityStatusIndicator
-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\NetworkProvider
-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\safer
-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\SettingSync
-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\System
-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WcmSvc
-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WorkplaceJoin
-HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WSDAPI
+HKEY_LOCAL_MACHINE\SYSTEM\ActivationBroker
+HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001
+HKEY_LOCAL_MACHINE\SYSTEM\DriverDatabase
+HKEY_LOCAL_MACHINE\SYSTEM\HardwareConfig
+HKEY_LOCAL_MACHINE\SYSTEM\Input
+HKEY_LOCAL_MACHINE\SYSTEM\Keyboard Layout
+HKEY_LOCAL_MACHINE\SYSTEM\Maps
+HKEY_LOCAL_MACHINE\SYSTEM\MountedDevices
+HKEY_LOCAL_MACHINE\SYSTEM\ResourceManager
+HKEY_LOCAL_MACHINE\SYSTEM\ResourcePolicyStore
+HKEY_LOCAL_MACHINE\SYSTEM\RNG
+HKEY_LOCAL_MACHINE\SYSTEM\Select
+HKEY_LOCAL_MACHINE\SYSTEM\Setup
+HKEY_LOCAL_MACHINE\SYSTEM\Software
+HKEY_LOCAL_MACHINE\SYSTEM\WaaS
+HKEY_LOCAL_MACHINE\SYSTEM\WPA
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet
