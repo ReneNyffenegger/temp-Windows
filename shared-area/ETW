@@ -1,0 +1,2 @@
+https://github.com/wbenny/EtwConsumerNT
+--> Simple project that demonstrates how an ETW consumer can be created just by using NTDLL 
