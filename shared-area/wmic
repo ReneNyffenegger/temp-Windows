@@ -1,0 +1,5 @@
+C:\Users\Rene>wmic logicalDisk get providerName, deviceId, description
+Description       DeviceID  ProviderName
+Local Fixed Disk  C:
+CD-ROM Disc       D:
+Removable Disk    E:
