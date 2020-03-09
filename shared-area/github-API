@@ -1,1 +1,2 @@
-invoke-webrequest https://api.github.com/repos/ReneNyffenegger/ldp-Ordnung -Headers @{Authorization = "Bearer $token"}
+$secString=convertTo-secureString $accessToken -asPlainText -force
+invoke-webrequest https://api.github.com/repos/ReneNyffenegger/ldp-Ordnung -authentication bearer -token $secString
