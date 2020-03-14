@@ -1,0 +1,37 @@
+/v       Queries for a specific registry key values.
+           If omitted, all values for the key are queried.
+
+           Argument to this switch can be optional only when specified
+           along with /f switch. This specifies to search in valuenames only.
+
+  /ve      Queries for the default value or empty value name (Default).
+
+  /s       Queries all subkeys and values recursively (like dir /s).
+
+  /se      Specifies the separator (length of 1 character only) in
+           data string for REG_MULTI_SZ. Defaults to "\0" as the separator.
+
+  /f       Specifies the data or pattern to search for.
+           Use double quotes if a string contains spaces. Default is "*".
+
+  /k       Specifies to search in key names only.
+
+  /d       Specifies the search in data only.
+
+  /c       Specifies that the search is case sensitive.
+           The default search is case insensitive.
+
+  /e       Specifies to return only exact matches.
+           By default all the matches are returned.
+
+  /t       Specifies registry value data type.
+           Valid types are:
+             REG_SZ, REG_MULTI_SZ, REG_EXPAND_SZ,
+             REG_DWORD, REG_QWORD, REG_BINARY, REG_NONE
+           Defaults to all types.
+
+  /z       Verbose: Shows the numeric equivalent for the type of the valuename.
+
+  /reg:32  Specifies the key should be accessed using the 32-bit registry view.
+
+  /reg:64  Specifies the key should be accessed using the 64-bit registry view.
