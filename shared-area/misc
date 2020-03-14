@@ -1,37 +1,75 @@
-/v       Queries for a specific registry key values.
-           If omitted, all values for the key are queried.
+#
+#   Assign 'continue' to preference variable $verbosePreference
+#   for verbose output.
+#
 
-           Argument to this switch can be optional only when specified
-           along with /f switch. This specifies to search in valuenames only.
+set-strictMode -version 2
 
-  /ve      Queries for the default value or empty value name (Default).
+function upload-file-to-github-repo($localPath, $localFilename, $repoPath, $repoFilename, $repoName, $repoOwner, $message, $token) {
+   #
+   #      File content must be represented in base 64
+   #
 
-  /s       Queries all subkeys and values recursively (like dir /s).
+   $localFileAbsolutePath = resolve-path "$localPath/$localFilename"
 
-  /se      Specifies the separator (length of 1 character only) in
-           data string for REG_MULTI_SZ. Defaults to "\0" as the separator.
+   if (! (test-path $localFileAbsolutePath)) {
+      "$localFileAbsolutePath does not exist"
+       return
+   }
 
-  /f       Specifies the data or pattern to search for.
-           Use double quotes if a string contains spaces. Default is "*".
+   $base64 = [System.Convert]::ToBase64String([System.IO.File]::ReadAllBytes($localFileAbsolutePath))
 
-  /k       Specifies to search in key names only.
+   $url = "https://api.github.com/repos/$repoOwner/$repoName/contents/$repoPath/$repoFilename"
 
-  /d       Specifies the search in data only.
+   try {
 
-  /c       Specifies that the search is case sensitive.
-           The default search is case insensitive.
+    #
+    #     TODO: PowerShell 7 introduces option -skipHTTPErrorCheck
+    #           This option should probably be used in order to have
+    #           see what HTTP status code was returned.
+    #
 
-  /e       Specifies to return only exact matches.
-           By default all the matches are returned.
+    # github API token is required for private repositories
 
-  /t       Specifies registry value data type.
-           Valid types are:
-             REG_SZ, REG_MULTI_SZ, REG_EXPAND_SZ,
-             REG_DWORD, REG_QWORD, REG_BINARY, REG_NONE
-           Defaults to all types.
+      $response = invoke-restMethod                      `
+         $url                                            `
+        -headers @{Authorization = "bearer $token"}
 
-  /z       Verbose: Shows the numeric equivalent for the type of the valuename.
+   }
+   catch [System.Net.WebException] {
+     #
+     #  I am too lazy to evaluate the details and just assume
+     #  that this is a 404. So the resource needs to be created
+     #
+        write-verbose 'Resource probably does not exist. Trying to create it'
 
-  /reg:32  Specifies the key should be accessed using the 32-bit registry view.
+        $body = '{{"message": "{0}", "content": "{1}" }}' -f $message, $base64
 
-  /reg:64  Specifies the key should be accessed using the 64-bit registry view.
+     #
+     #  TODO: of course, if the url $url does not exist on the webserver,
+     #  the following invocation fails.
+     #
+        $response = invoke-webrequest $url                                               `
+          -method          PUT                                                           `
+          -contentType     application/json                                              `
+          -headers       @{Authorization = "bearer $token"}                              `
+          -body            $body
+
+      #
+      # expected: 201 Created
+      #
+        write-verbose "$($response.StatusCode) $($response.StatusDescription)"
+        return
+   }
+   write-verbose "file seems to exit, updating it"
+   $sha = $response.sha
+   write-verbose "SHA = $sha"
+
+   $body = '{{"message": "{0}", "content": "{1}", "sha": "{2}" }}' -f $message, $base64, $sha
+
+   $response = invoke-webrequest $url                                               `
+     -method          PUT                                                           `
+     -contentType     application/json                                              `
+     -headers       @{Authorization = "bearer $token"}                              `
+     -body            $body
+}
