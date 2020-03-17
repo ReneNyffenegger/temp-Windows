@@ -1,0 +1,7 @@
+function addDirToPath($dir) {
+   $userPath = [environment]::getEnvironmentVariable('PATH', 'user')
+   $env:PATH = "$dir;$userPath"
+   [environment]::setEnvironmentVariable('PATH', $env:PATH, 'user')
+}
+
+addDirToPath "$($env:github_top_root)lib\scripts"
