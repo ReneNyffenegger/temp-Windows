@@ -1,3 +1,14 @@
 WARNING: XnlT3rPNUp0: writing DASH m4a. Only some players support this container. Install ffmpeg or avconv to fix this automatically.
 ERROR: ffprobe/avprobe and ffmpeg/avconv not found. Please install one.
 
+
+tools/ffmpeg
+
+
+
+
+$ua.downloadFile('https://imagemagick.org/download/binaries/ImageMagick-7.0.10-1-portable-Q16-x86.zip', "$downloadFolder\ImageMagick-portable.zip")
+
+expand-archive $downloadFolder\ImageMagick-portable.zip  $binPath\ImageMagick
+
+addDirToPath $binPath\ImageMagick
