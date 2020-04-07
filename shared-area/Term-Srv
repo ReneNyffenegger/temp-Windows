@@ -1,1 +1,70 @@
 takeown - f c:\Windows\System32\termsrv.dll
+
+
+https://blog.differentpla.net/blog/2007/04/22/enabling-concurrent-remote-desktop-sessions-in-vista/
+   fc /b %SYSTEMROOT%\System32\termsrv.dll termsrv_new.dll
+   
+   cd /d %SYSTEMROOT%\System32
+   sc stop UmRdpService
+   sc stop TermService
+   takeown /f termsrv.dll
+   cacls termsrv.dll /G DOMAIN\User:F
+   ren termsrv.dll termsrv.dll.orig
+   copy path\to\termsrv_new.dll termsrv.dll
+   sc start TermService
+   sc start UmRdpService
+   
+https://deep.support/?c=p&l=2&d=99
+
+   1. On Folder Options ENABLE to view all system and hidden files temporary
+   2. STOP Remote Desktop Service
+   3. Navigate thru your %windir%\system32 folder
+   4. BACKUP termsrv.dll via CMD
+      COPY "%SystemRoot%\System32\termsrv.dll" "%SystemRoot%\System32\*.*.bak"
+   5. Take Ownership on file via CMD
+      takeown /a /f %SystemRoot%\System32\termsrv.dll
+   6. Grant administrators Rights on file via CMD
+      ICACLS %SystemRoot%\System32\termsrv.dll /Grant Administrators:F
+   7. PATCH (Require administrator rights. Right-click the exe file, select Run as Administrator)
+   8. Compare both termsrv.dll via Command Prompt (Start->Run->CMD)
+      fc/b termsrv.dll termsrv.dll.bak
+   -----------------------------------BELOW FOR WINDOWS XP-------------------------------
+   7.Click on Start Menu -> Run command and type gpedit.msc, follow by Enter to open up the Group Policy Editor.
+   8.Navigate to Computer Configuration -> Administrative Templates -> Windows Components -> Terminal Services.
+   9.Enable Limit Number of Connections and set the number of connections to 3 (or more). The setting allows more than one users to use the computer and logged on at the same time.
+   10.Ensure the Remote Desktop is enabled in System Properties’ Remote tab by selecting the radio button for Allow users to connect remotely to this computer.
+   11.Enable and turn on Fast User Switching in Control Panel -> User Accounts -> Change the way users log on or off.
+   -----------------------------------ABOVE FOR WINDOWS XP-------------------------------
+   12.Restart the computer normally.
+   13.Go to Step 1 to HIDE all system and hidden files
+   14.START Remote Desktop Service
+   
+   Change Remote Desktop Port
+   
+   Default Remote Desktop Port: 3389
+   
+   For each computer you want to remotely connect to you have to configure each computer to listen to different ports to avoid port conflicts by changing the registry key in
+   
+   HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\TerminalServer\WinStations\RDP-Tcp\PortNumber
+   
+   START > RUN > REGEDIT
+   
+   Navigate thru:
+   
+   HKEY_LOCAL_MACHINE > System > CurrentControlSet > Control > TerminalServer > WinStations > RDP-Tcp
+   
+   Then locate the following registry subkey:
+   
+   PortNumber
+   
+   On the Edit menu, click Modify, and then on the Edit DWORD Value click Decimal which will show us the exact port number.
+   
+   Note: To avoid conflict with other programs it is suggested to select a port between 49152 and 65535.
+   
+   Now take that number you've chosen your computer to listen to and configure your router to port forward to that number
+   
+   To connect to that computer your format will now be IP:Port
+   (ex. 222.222.222.222:1234) to connect to that specific computer behind the router
+   
+   Important: If you have a firewall software running, that too has to be configured to allow communication to the port you opened in your router as well.
+      
