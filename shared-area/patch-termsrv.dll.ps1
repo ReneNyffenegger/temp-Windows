@@ -8,7 +8,9 @@ write-host "Status of service TermService:  $svc_TermService_status"
 stop-service UmRdpService
 stop-service TermService
 
-$termsrv_dll_owner = (get-acl c:\windows\system32\termsrv.dll).owner
+$termsrv_dll_acl = get-acl c:\windows\system32\termsrv.dll
+
+$termsrv_dll_owner = $termsrv_dll_acl.owner
 write-host "Owner of termsrv.dll:           $termsrv_dll_owner"
 
 copy-item    c:\windows\system32\termsrv.dll c:\windows\system32\termsrv.dll.copy
@@ -84,6 +86,8 @@ fc.exe /b c:\windows\system32\termsrv.dll.patched c:\windows\system32\termsrv.dl
 
 # copy-item c:\windows\system32\termsrv.dll.copy    c:\windows\system32\termsrv.dll
 copy-item c:\windows\system32\termsrv.dll.patched c:\windows\system32\termsrv.dll
+
+set-acl c:\windows\system32\termsrv.dll $termsrv_dll_acl
 
 # start-service UmRdpService
 # start-service TermService
