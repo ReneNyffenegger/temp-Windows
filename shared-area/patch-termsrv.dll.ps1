@@ -17,7 +17,6 @@ copy-item    c:\windows\system32\termsrv.dll c:\windows\system32\termsrv.dll.cop
 
 #
 #   Take ownership of the DLL.
-#   This seems at necessary later when the dll needs to be overridden.
 #
 takeown   /f c:\windows\system32\termsrv.dll
 
