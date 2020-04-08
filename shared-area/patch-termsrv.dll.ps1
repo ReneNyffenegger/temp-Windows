@@ -90,7 +90,9 @@ copy-item c:\windows\system32\termsrv.dll.patched c:\windows\system32\termsrv.dl
 sc start TermService
 sc start UmRdpService
 
-
+# Can service not be started because of
+  - HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server
+    Value TSEnabled (which should be set to 1?)
 
 
 # $dll_as_text = get-content c:\windows\system32\termsrv.dll -raw
