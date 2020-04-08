@@ -14,6 +14,11 @@ $termsrv_dll_owner = $termsrv_dll_acl.owner
 write-host "Owner of termsrv.dll:           $termsrv_dll_owner"
 
 copy-item    c:\windows\system32\termsrv.dll c:\windows\system32\termsrv.dll.copy
+
+#
+#   Take ownership of the DLL.
+#   This seems at necessary later when the dll needs to be overridden.
+#
 takeown   /f c:\windows\system32\termsrv.dll
 
 $new_termsrv_dll_owner = (get-acl c:\windows\system32\termsrv.dll).owner
