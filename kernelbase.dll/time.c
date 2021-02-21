@@ -12,11 +12,10 @@ void print(const char* txt) {
 }
 
 //
-// Add declaration for undocumented function
-// time.
+// Add typedef for for undocumented function
+// time in kernelbase.dll:
 //
-
-typedef long long int (WINAPI *f_time)(int*);
+typedef long long int (WINAPI *f_time)(long long int*);
 
 ULONG WINAPI start (void* PEB) {
 
@@ -41,16 +40,14 @@ ULONG WINAPI start (void* PEB) {
 
    char buf[100];
 
-   int unixTime_param;
-   int unixTime_return = time(&unixTime_param);
+   long long int unixTime_param;
+   long long int unixTime_return = time(&unixTime_param);
 
-   wsprintfA(buf, "seconds since 1970 (parameter   ): %d\n", unixTime_param );
+   wsprintfA(buf, "Seconds since 1970 (parameter   ): %I64d\n", unixTime_param );
    print(buf);
-// WriteConsoleA(stdOut, buf, lstrlen(buf), &charsWritten, NULL);
 
-   wsprintfA(buf, "seconds since 1970 (return value): %d\n", unixTime_return);
+   wsprintfA(buf, "Seconds since 1970 (return value): %I64d\n", unixTime_return);
    print(buf);
-// WriteConsoleA(stdOut, buf, lstrlen(buf), &charsWritten, NULL);
 
    return 0;
 }
