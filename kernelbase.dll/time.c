@@ -1,41 +1,56 @@
 //
-//  gcc -nodefaultlibs -nostartfiles -nostdlib .\time.c -luser32 -lkernel32 -lmsvcrt -o time.exe
+//  gcc -Wall -Wextra -Wno-unused-parameter -nodefaultlibs -nostartfiles -nostdlib .\time.c -luser32 -lkernel32 '-Wl,-estart' -o time.exe
 //
 
 #include <windows.h>
+
+HANDLE stdOut;
+
+void print(const char* txt) {
+   DWORD charsWritten;
+   WriteConsoleA(stdOut, txt, lstrlen(txt), &charsWritten, NULL);
+}
 
 //
 // Add declaration for undocumented function
 // time.
 //
 
-int (__stdcall *time)(int*);
+typedef int (WINAPI *f_time)(int*);
 
-// int __stdcall time(int*);
+ULONG WINAPI start (void* PEB) {
 
-ULONG __stdcall start (void* PEB) {
+   stdOut = GetStdHandle(STD_OUTPUT_HANDLE);
+   if (stdOut == INVALID_HANDLE_VALUE) {
+      return 1;
+   }
 
-   int unixTime_param;
+   HMODULE kernelBase = LoadLibraryA("kernelbase.dll");
 
-   HMODULE h = LoadLibraryA("kernelbase.dll");
-   time=GetProcAddress(h, "time");
+   if (!kernelBase) {
+      print("Could not load library kernelbase.dll\n");
+      return 2;
+   }
 
+   f_time time = ((f_time) GetProcAddress(kernelBase, "time"));
 
+   if (!time) {
+      print("Could not get address of time\n");
+      return 2;
+   }
 
    char buf[100];
-   DWORD charsWritten;
-   HANDLE stdOut = GetStdHandle(STD_OUTPUT_HANDLE);
 
-   wsprintfA(buf, "time = %d", h);
-   WriteConsoleA(stdOut, buf, lstrlen(buf), &charsWritten, NULL);
-
+   int unixTime_param;
    int unixTime_return = time(&unixTime_param);
 
    wsprintfA(buf, "seconds since 1970 (parameter   ): %d\n", unixTime_param );
-   WriteConsoleA(stdOut, buf, lstrlen(buf), &charsWritten, NULL);
+   print(buf);
+// WriteConsoleA(stdOut, buf, lstrlen(buf), &charsWritten, NULL);
 
    wsprintfA(buf, "seconds since 1970 (return value): %d\n", unixTime_return);
-   WriteConsoleA(stdOut, buf, lstrlen(buf), &charsWritten, NULL);
+   print(buf);
+// WriteConsoleA(stdOut, buf, lstrlen(buf), &charsWritten, NULL);
 
    return 0;
 }
