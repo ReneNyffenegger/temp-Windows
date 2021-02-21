@@ -16,7 +16,7 @@ void print(const char* txt) {
 // time.
 //
 
-typedef int (WINAPI *f_time)(int*);
+typedef long long int (WINAPI *f_time)(int*);
 
 ULONG WINAPI start (void* PEB) {
 
