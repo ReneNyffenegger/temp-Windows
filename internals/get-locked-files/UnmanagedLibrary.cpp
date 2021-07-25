@@ -68,15 +68,15 @@ typedef struct _OBJECT_TYPE_INFORMATION
     ULONG NonPagedPoolUsage;
 } OBJECT_TYPE_INFORMATION, *POBJECT_TYPE_INFORMATION;
  
-using namespace std;
+//using namespace std;
  
 PVOID GetLibraryProcAddress(PSTR LibraryName, PSTR ProcName) {
     return GetProcAddress(GetModuleHandleA(LibraryName), ProcName);
 }
  
 _NtQuerySystemInformation NtQuerySystemInformation = (_NtQuerySystemInformation)GetLibraryProcAddress("ntdll.dll", "NtQuerySystemInformation");
-_NtDuplicateObject NtDuplicateObject = (_NtDuplicateObject)GetLibraryProcAddress("ntdll.dll", "NtDuplicateObject");
-_NtQueryObject NtQueryObject = (_NtQueryObject)GetLibraryProcAddress("ntdll.dll", "NtQueryObject");
+_NtDuplicateObject        NtDuplicateObject        = (_NtDuplicateObject)GetLibraryProcAddress("ntdll.dll", "NtDuplicateObject");
+_NtQueryObject            NtQueryObject            = (_NtQueryObject)GetLibraryProcAddress("ntdll.dll", "NtQueryObject");
  
 struct QueryStructure {
     HANDLE dupHandle;
@@ -191,6 +191,7 @@ void CheckForLocks(wstring fullPath, vector<unsigned long> *processes) {
     PROCESSENTRY32 process;
     ZeroMemory(&process, sizeof(process));
     process.dwSize = sizeof(process);
+
     if (Process32First(snapshot, &process))
     {
         do
@@ -201,10 +202,15 @@ void CheckForLocks(wstring fullPath, vector<unsigned long> *processes) {
                 continue;
             }
             handleInfo = (PSYSTEM_HANDLE_INFORMATION)malloc(handleInfoSize);
-            while ((status = NtQuerySystemInformation(SystemHandleInformation, handleInfo, handleInfoSize, NULL)) == STATUS_INFO_LENGTH_MISMATCH)
-            {
-                handleInfo = (PSYSTEM_HANDLE_INFORMATION)realloc(handleInfo, handleInfoSize *= 2);
+
+            while ((status = NtQuerySystemInformation(
+                                SystemHandleInformation,
+                                handleInfo,
+                                handleInfoSize, NULL)) == STATUS_INFO_LENGTH_MISMATCH) {
+
+                handleInfo = (PSYSTEM_HANDLE_INFORMATION) std::realloc(handleInfo, handleInfoSize *= 2);
             }
+
             if (!NT_SUCCESS(status))
             {
                 return;
@@ -212,10 +218,10 @@ void CheckForLocks(wstring fullPath, vector<unsigned long> *processes) {
 
             for (i = 0; i < handleInfo->HandleCount; i++) {
 
-                SYSTEM_HANDLE handle = handleInfo->Handles[i];
-                HANDLE dupHandle = NULL;
+                SYSTEM_HANDLE            handle    = handleInfo->Handles[i];
+                HANDLE                   dupHandle = NULL;
                 POBJECT_TYPE_INFORMATION objectTypeInfo;
-                PVOID objectNameInfo;
+                PVOID                    objectNameInfo;
                 UNICODE_STRING objectName;
                 ULONG returnLength = 0;
                 if (handle.ProcessId != pid)
