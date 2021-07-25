@@ -116,9 +116,9 @@ DWORD WINAPI queryThreadCloseHandle(LPVOID parameter)
 HANDLE queryThreadHandle = CreateThread(0, 0, &queryThread, 0, 0, 0);
 HANDLE queryThreadCloseHandleHandle = CreateThread(0, 0, &queryThreadCloseHandle, 0, 0, 0);
  
-void ConvertPath(wstring *path, map<wstring, wstring> *volumes) {
+void ConvertPath(std::wstring *path, std::map<std::wstring, std::wstring> *volumes) {
 
-    for (map<wstring, wstring>::iterator i = (*volumes).begin(); i != (*volumes).end(); ++i) {
+    for (std::map<std::wstring, std::wstring>::iterator i = (*volumes).begin(); i != (*volumes).end(); ++i) {
 
         if ((*path).compare(0, (*i).first.size(), (*i).first) == 0) {
             *path = (*path).replace(0, (*i).first.size(), (*i).second);
@@ -127,14 +127,14 @@ void ConvertPath(wstring *path, map<wstring, wstring> *volumes) {
     }
 }
  
-void CheckForLocks(wstring fullPath, vector<unsigned long> *processes) {
+void CheckForLocks(std::wstring fullPath, std::vector<unsigned long> *processes) {
     DWORD   CharCount = 0;
     WCHAR   DeviceName[MAX_PATH] = L"";
     HANDLE  FindHandle = INVALID_HANDLE_VALUE;
     size_t  Index = 0;
     BOOL    Success = FALSE;
     WCHAR   VolumeName[MAX_PATH] = L"";
-    map<wstring, wstring> volumes;
+    std::map<std::wstring, std::wstring> volumes;
     FindHandle = FindFirstVolumeW(VolumeName, ARRAYSIZE(VolumeName));
 
     while (true) {
@@ -163,7 +163,7 @@ void CheckForLocks(wstring fullPath, vector<unsigned long> *processes) {
                 name = NULL;
             }
         }
-        volumes[DeviceName + wstring(L"\\")] = name;
+        volumes[DeviceName + std::wstring(L"\\")] = name;
         if (name != NULL)
         {
             delete[] name;
@@ -262,7 +262,7 @@ void CheckForLocks(wstring fullPath, vector<unsigned long> *processes) {
 
                 if (objectName.Length) {
 
-                    wstring objectNameAsWString = wstring(objectName.Buffer, objectName.Length / sizeof(WCHAR));
+                    std::wstring objectNameAsWString = std::wstring(objectName.Buffer, objectName.Length / sizeof(WCHAR));
                     ConvertPath(&objectNameAsWString, &volumes);
 
                     if ((int)objectNameAsWString.find(fullPath) >= 0) {
@@ -283,7 +283,7 @@ void CheckForLocks(wstring fullPath, vector<unsigned long> *processes) {
     }
 }
  
-bool CloseHandles(wstring fullPath, int process) {
+bool CloseHandles(std::wstring fullPath, int process) {
 
     DWORD   CharCount = 0;
     WCHAR   DeviceName[MAX_PATH] = L"";
@@ -291,7 +291,7 @@ bool CloseHandles(wstring fullPath, int process) {
     size_t  Index = 0;
     BOOL    Success = FALSE;
     WCHAR   VolumeName[MAX_PATH] = L"";
-    map<wstring, wstring> volumes;
+    std::map<std::wstring, std::wstring> volumes;
     FindHandle = FindFirstVolumeW(VolumeName, ARRAYSIZE(VolumeName));
     while (true)
     {
@@ -320,7 +320,7 @@ bool CloseHandles(wstring fullPath, int process) {
                 name = NULL;
             }
         }
-        volumes[DeviceName + wstring(L"\\")] = name;
+        volumes[DeviceName + std::wstring(L"\\")] = name;
         if (name != NULL)
         {
             delete[] name;
@@ -404,7 +404,7 @@ bool CloseHandles(wstring fullPath, int process) {
         objectName = *(PUNICODE_STRING)objectNameInfo;
         if (objectName.Length)
         {
-            wstring objectNameAsWString = wstring(objectName.Buffer, objectName.Length / sizeof(WCHAR));
+            std::wstring objectNameAsWString = std::wstring(objectName.Buffer, objectName.Length / sizeof(WCHAR));
             ConvertPath(&objectNameAsWString, &volumes);
             if ((int)objectNameAsWString.find(fullPath) >= 0)
             {

@@ -5,7 +5,7 @@
 #include <map>
 #include <vector>
  
-using namespace std;
+// using namespace std;
  
-void CheckForLocks(wstring fullPath, vector<unsigned long> *processes);
-bool CloseHandles(wstring fullPath, int process);
+void CheckForLocks(std::wstring fullPath, std::vector<unsigned long> *processes);
+bool CloseHandles(std::wstring fullPath, int process);
