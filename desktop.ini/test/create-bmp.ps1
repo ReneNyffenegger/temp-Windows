@@ -5,4 +5,3 @@ $brushRect = new-object Drawing.SolidBrush ([Drawing.Color]::FromArgb(255, 255, 
 $canvas.FillRectangle($brushRect, [Drawing.Rectangle]::FromLTRB(0, 0, 16, 16));
 
 $bmp_16x16.Save("$(get-location)\16x16.bmp", [System.Drawing.Imaging.ImageFormat]::Bmp);
-
