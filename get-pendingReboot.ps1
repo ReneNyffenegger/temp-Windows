@@ -119,11 +119,13 @@ Process {
 	    If ([Int32]$WMI_OS.BuildNumber -ge 6001) {
 		    $RegSubKeysCBS = $WMI_Reg.EnumKey($HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing\")
 		    $CBSRebootPend = $RegSubKeysCBS.sNames -contains "RebootPending"		
+        write-host "CBSRebootPend = $CBSRebootPend"
 	    }
 							
 	    ## Query WUAU from the registry
 	    $RegWUAURebootReq = $WMI_Reg.EnumKey($HKLM,"SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update\")
 	    $WUAURebootReq = $RegWUAURebootReq.sNames -contains "RebootRequired"
+      write-host "WUAURebootReq = $WUAURebootReq"
 						
 	    ## Query PendingFileRenameOperations from the registry
 	    $RegSubKeySM = $WMI_Reg.GetMultiStringValue($HKLM,"SYSTEM\CurrentControlSet\Control\Session Manager\","PendingFileRenameOperations")
@@ -139,11 +141,13 @@ Process {
 
 	    If (($ActCompNm -ne $CompNm) -or $PendDomJoin) {
 	        $CompPendRen = $true
+          write-host 'CompPendRen = true'
 	    }
 						
 	    ## If PendingFileRenameOperations has a value set $RegValuePFRO variable to $true
 	    If ($RegValuePFRO) {
 		    $PendFileRename = $true
+          write-host 'PendFileRename = true'
 	    }
 
 	    ## Determine SCCM 2012 Client Reboot Pending Status
@@ -175,6 +179,7 @@ Process {
 		    }
 		    If ($CCMClientSDK.IsHardRebootPending -or $CCMClientSDK.RebootPending) {
 		        $SCCM = $true
+            write-host 'SCCM = true'
 		    }
 	    }
             
