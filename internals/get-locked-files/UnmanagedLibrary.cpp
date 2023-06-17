@@ -128,6 +128,7 @@ void ConvertPath(std::wstring *path, std::map<std::wstring, std::wstring> *volum
 }
  
 void CheckForLocks(std::wstring fullPath, std::vector<unsigned long> *processes) {
+
     DWORD   CharCount = 0;
     WCHAR   DeviceName[MAX_PATH] = L"";
     HANDLE  FindHandle = INVALID_HANDLE_VALUE;
@@ -139,17 +140,19 @@ void CheckForLocks(std::wstring fullPath, std::vector<unsigned long> *processes)
 
     while (true) {
         Index = wcslen(VolumeName) - 1;
-        if (VolumeName[0] != L'\\' || VolumeName[1] != L'\\' || VolumeName[2] != L'?' || VolumeName[3] != L'\\' || VolumeName[Index] != L'\\')
-        {
+
+        if (VolumeName[0] != L'\\' || VolumeName[1] != L'\\' || VolumeName[2] != L'?' || VolumeName[3] != L'\\' || VolumeName[Index] != L'\\') {
             break;
         }
+
         VolumeName[Index] = L'\0';
         CharCount = QueryDosDeviceW(&VolumeName[4], DeviceName, ARRAYSIZE(DeviceName));
         VolumeName[Index] = L'\\';
-        if (CharCount == 0)
-        {
+
+        if (CharCount == 0) {
             break;
         }
+
         DWORD   size = MAX_PATH + 1;
         PWCHAR  name = NULL;
         BOOL    success = FALSE;
@@ -183,24 +186,25 @@ void CheckForLocks(std::wstring fullPath, std::vector<unsigned long> *processes)
     FindHandle = INVALID_HANDLE_VALUE;
     NTSTATUS status;
     PSYSTEM_HANDLE_INFORMATION handleInfo;
-    ULONG handleInfoSize = 0x10000;
-    HANDLE processHandle;
-    ULONG i;
-    DWORD pid;
-    HANDLE snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
-    PROCESSENTRY32 process;
+    ULONG                      handleInfoSize = 0x10000;
+    HANDLE                     processHandle;
+    ULONG                      i;
+    DWORD                      pid;
+    HANDLE                     snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+    PROCESSENTRY32             process;
     ZeroMemory(&process, sizeof(process));
     process.dwSize = sizeof(process);
 
-    if (Process32First(snapshot, &process))
-    {
-        do
-        {
+    if (Process32First(snapshot, &process)) {
+
+        do {
+
             pid = process.th32ProcessID;
-            if (!(processHandle = OpenProcess(PROCESS_DUP_HANDLE, FALSE, pid)))
-            {
+
+            if (!(processHandle = OpenProcess(PROCESS_DUP_HANDLE, FALSE, pid))) {
                 continue;
             }
+
             handleInfo = (PSYSTEM_HANDLE_INFORMATION)malloc(handleInfoSize);
 
             while ((status = NtQuerySystemInformation(
@@ -293,8 +297,9 @@ bool CloseHandles(std::wstring fullPath, int process) {
     WCHAR   VolumeName[MAX_PATH] = L"";
     std::map<std::wstring, std::wstring> volumes;
     FindHandle = FindFirstVolumeW(VolumeName, ARRAYSIZE(VolumeName));
-    while (true)
-    {
+
+    while (true) {
+
         Index = wcslen(VolumeName) - 1;
         if (VolumeName[0] != L'\\' || VolumeName[1] != L'\\' || VolumeName[2] != L'?' || VolumeName[3] != L'\\' || VolumeName[Index] != L'\\')
         {

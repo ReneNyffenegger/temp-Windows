@@ -20,6 +20,4 @@ int main() {
 
       CloseHandles(path, *process);
    }
-
-
 }
